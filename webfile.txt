@@ -1,0 +1,1035 @@
+前端图片库：花瓣网，摄图网，觅元素，站酷网，千图网，千库网，爱集
+
+jQuery http://jquery.cuishifeng.cn/
+bootstrap http://www.bootcss.com/
+vue cn.vuejs.org
+nodejs http://nodejs.cn/api/
+react https://facebook.github.io/react/
+animate https://daneden.github.io/animate.css/
+http://cssreference.io/
+jQuery之家：http://www.htmleaf.com/
+大头网：http://www.datouwang.com/
+轮播特效： http://www.yyyweb.com/demo/parallax-slider/
+地图密钥：W8gvr0yUrqdzzCUXLSMh2ykv5mYvG8pw
+
+织梦模板：http://www.dede58.com/
+
+前端技术随笔：http://www.cnblogs.com/lhb25/
+http://www.cnblogs.com/lhb25/archive/2011/07/20/33-mega-jquery-image-plugins-collection.html
+
+百度文本编辑器：http://ueditor.baidu.com/website/download.html#ueditor
+
+一款国外地图生成器：http://www.web-site-map.com/xml_sitemap.php
+
+jQuery API : http://jquery.cuishifeng.cn/
+vue API: https://cn.vuejs.org/
+js规则：https://www.awesomes.cn/repo/airbnb/javascript
+js前端库集合：https://www.awesomes.cn/repos/Applications/frameworks
+H5游戏引擎:(国外版)http://phaser.io/
+白鹭引擎(国产H5游戏引擎 文档中文)：https://www.egret.com/
+unity3d引擎(3d游戏引擎 可使用js编写):https://unity3d.com/cn/
+threejs(3D页面渲染框架): http://threejs.org/
+bootstrap中文网:http://v3.bootcss.com/
+fontawesome字体库： http://fontawesome.io/icons/
+css3动画框架： https://daneden.github.io/animate.css/
+
+21个CSS惊人技巧：http://blog.bingo929.com/21-amazing-css-techniques-you-should-know.html
+css特殊形状：http://www.jb51.net/css/59675.html
+Bounce.js – 快速创建漂亮的 CSS3 动画效果：
+https://www.cnblogs.com/lhb25/p/create-tasty-css3-animations-time.html
+
+前沿HTML5&css3效果：http://www.yyyweb.com/377.html
+web开发中很实用的10个效果：http://www.yyyweb.com/350.html
+Magic CSS3 – 创建各种神奇的交互动画效果：
+http://www.cnblogs.com/lhb25/p/special-effects-with-magic-css3-animations.html
+
+精心挑选的23款美轮美奂的 jQuery 图片特效插件：
+http://www.cnblogs.com/lhb25/archive/2012/08/13/jquery-image-effects-plugins.html
+
+Web 前端开发精华文章推荐（jQuery、HTML5、CSS3）：
+http://www.cnblogs.com/lhb25/archive/2012/12/12/must-read-links-for-web-designers-and-developers-volume-12.html
+
+滚动条样式修改：https://www.lyblog.net/detail/314.html
+
+随记css:http://www.cnblogs.com/linx/category/822027.html
+
+CSS3带动态阴影效果的3D图片翻转特效:
+http://www.htmleaf.com/ziliaoku/qianduanjiaocheng/201503081486.html
+
+极致box-shadow：http://www.cnblogs.com/lhb25/p/css-balls.html
+
+js键盘按钮keyCode及示例大全网址：https://www.cnblogs.com/daysme/p/6272570.html
+
+
+jQuery UI实例-自动完成（Autocomplete） http://www.runoob.com/jqueryui/example-autocomplete.html
+
+
+
+Javascript 库
+
+Particles.js—?一个用来在 web 中创建炫酷的浮动粒子的库
+
+Three.js?—?一个用来在 web 中创建 3d 物体和 3d 空间的库
+
+Fullpage.js—?快速实现全屏滚动特性
+
+Typed.js?—?打字机效果
+
+Waypoints.js?—?滚动到某个元素位置时触发一个功能
+
+Highlight.js?—?web 语法高亮
+
+Chart.js?—?使用 JavaScript 创建漂亮的图表
+
+Instantclick?—?能够明显加速网站加载时间，鼠标 hover 时预加载资源
+
+Chartist?—?另一个图表库
+
+Motio?—?一个基于动画和平移的雪碧图库
+
+Animsition?—?CSS 实现动画过渡的 jQuery 插件
+
+Barba.js?—?流式页面过渡
+
+TwentyTwenty?—?一个对比图片的可视化 diff 工具
+
+Vivus.js?—?在 SVG 上绘制动画
+
+Wow.js?—?滚动时展现动画
+
+Scrolline.js?—?页面滚动时显示滚动进度
+
+Velocity.js?—?快速流畅的 JavaScript 动画
+
+Animate on scroll?—?漂亮的页面滚动元素动画
+
+Handlebars.js?—?Javascript 模板
+
+jInvertScroll?—?视差滚动
+
+One page scroll?—?又一个页面滚动库
+
+Parallax.js?—?对智能设备方向变化做出响应的视差引擎
+
+Typeahead.js?—?搜索补全
+
+Dragdealer.js?—?炫酷拖拽
+
+Bounce.js?—?创建炫酷的 CSS3 动画
+
+Pagepiling.js?—?全屏滚动
+
+Multiscroll.js?—?两列垂直反向滚动
+
+Favico.js?—?动态 favicon
+
+Midnight.js?—?固定头部切换效果
+
+Anime.js?—?动画库
+
+Keycode?—?获取键盘按键的 JavaScript keycode
+
+Sortable?—?拖拽插件
+
+Flexdatalist?—?自动补全
+
+Slideout.js?—?移动应用侧滑导航
+
+Jquerymy?—?使用 jQuery 实现双向数据绑定
+
+Cleave.js?—?实时格式化输入内容
+
+Page?—?客户端单页应用路由
+
+Selectize.js?—?用来添加 tag 的 Hybrid 选择框
+
+Nice select?—?创建漂亮的选择框的 jQuery 库
+
+Tether?—?使用固定定位来创建相关元素
+
+Shepherd.js?—?为应用创建新手引导
+
+Tooltip?—?tooltip 提示框
+
+Select2?—?Jquery 选择框插件
+
+IziToast?—?通知弹窗实现
+
+IziModal?—?模态框实现
+
+CSS 库 / 设计相关
+
+Animate.css?—?动画库
+
+Flat UI Colors?—?扁平化设计配色
+
+Material design lite—?基于 Google material design 的框架
+
+Colorrrs?—?随机颜色生成器
+
+Section separators?—?CSS 实现区域分割
+
+Topcoat?—?框架
+
+Create ken burns effect?—?使用 CSS3 动画实现 Ken burns 特效
+
+DynCSS?—?给 CSS 添加 function，动态化 CSS
+
+Magic animations?—?CSS3 实现动画特效
+
+CSSpin?—?css spinners 合集
+
+Feather icons?—?Icon 集合
+
+Ion icons?—?Icon 集合
+
+Font awesome?—?Icon 集合
+
+Font generator?—?组合多个字体创建混合字体
+
+On/Off switch?—?使用 CSS 创建 on/off 开关、radio 按钮
+
+UI Kit?—?框架
+
+Bootstrap?—?框架
+
+Foundation?—?框架
+
+有用的产品/链接
+
+<head>cheatsheet?—?可以写在<head>中的所有标签
+
+Ghost?—?基于 Node.js 的博客平台
+
+What runs?—?一个用于网站技术分析的 Chrome 插件
+
+Learn anything?—?一个强大的用于分析某个主题的思维导图
+
+
+
+
+
+1.npm
+npm -v          #显示版本，检查npm 是否正确安装
+
+npm install express   #安装express模块
+ 
+npm install -g express  #全局安装express模块
+ 
+npm list         #列出已安装模块
+ 
+npm show express     #显示模块详情
+ 
+npm update        #升级当前目录下的项目的所有模块
+ 
+npm update express    #升级当前目录下的项目的指定模块
+ 
+npm update -g express  #升级全局安装的express模块
+ 
+npm uninstall express  #删除指定的模块
+
+
+2.browsersync
+
+browser-sync start --server --files "**/*.css, **/*.html"
+browser-sync start --server --files "*.html"
+
+3.git上传下载
+
+（1）git上传文件
+
+git init
+
+git add .
+
+git commit -m 'first commit'
+
+git remote add origin https://github.com/cade8800/ionic-demo.git
+
+git pull --rebase origin master
+
+git push -u origin master
+
+git status
+
+
+（2）git下载到本地
+
+cd到要下载到的文件夹下
+git clone https://github.com/cade8800/ionic-demo.git
+
+（3）git删除git仓库内容
+先clone要删除的文件到本地
+git clone 
+git rm --cached -r address.html
+git commit -m "address.html"
+git push https://github.com/bellylock/nothing.git
+
+
+
+4.H5
+https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/HTML5
+
+
+5.更改placeholdercss属性
+input::-webkit-input-placeholder { /* WebKit browsers */  
+  color: white;  
+}  
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
+  color: white;  
+}  
+input::-moz-placeholder { /* Mozilla Firefox 19+ */  
+  color: white;  
+}  
+input:-ms-input-placeholder { /* Internet Explorer 10+ */  
+  color: white;  
+} 
+
+
+6.地图（百度地图）
+http://api.map.baidu.com/lbsapi/creatmap/
+
+
+7.CSS overflow 属性  定义和用法（滚动条）
+
+　　overflow 属性规定当内容溢出元素框时发生的事情。
+
+　　说明：这个属性定义溢出元素内容区的内容会如何处理。如果值为 scroll，不论是否需要，用户代理都会提供一种滚动机制。
+因此，有可能即使元素框中可以放下所有内容也会出现滚动条。
+
+
+可能的值
+
+　　visible    
+默认值。内容不会被修剪，会呈现在元素框之外。
+
+　　hidden    
+内容会被修剪，并且其余内容是不可见的。
+
+　　scroll    
+内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。
+
+　　auto    
+如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。
+
+　　inherit    
+规定应该从父元素继承 overflow 属性的值。
+
+/*设置 overflow 属性 溢出元素内容区的内容隐藏*/
+div  {  width:150px;  height:150px;  overflow:hidden;  }
+/*如果只需要对水平方向的溢出隐藏，可以使用overflow-x*/
+div  {  width:150px;  height:150px;  overflow-x:hidden;  }
+
+
+
+8.direction版本：CSS2　 兼容性：IE5+　继承性：无  
+   
+语法：   （改变滚动条位置）
+   
+direction : ltr | rtl | inherit   
+   
+参数：   
+   
+ltr : 　文本流从左到右  
+rtl : 　文本流从右到左  
+inherit : 　文本流的值不可继承   
+   
+说明：   
+   
+用于设置文本流的方向。  
+假如您想应用direction属性于内联文本，您必须设定unicode-bidi属性为embed或bidi-override。   
+对应的脚本特性为direction。请参阅我编写的其他书目。   
+   
+示例：   
+   
+div { direction: rtl; unicode-bidi: bidi-override; }   
+
+
+
+9.更改select样式，input样式
+select{
+                //清除select的边框样式
+                border: none;
+                //清除select聚焦时候的边框颜色
+                outline: none;
+                //将select的宽高等于div的宽高
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                //隐藏select的下拉图标
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                //通过padding-left的值让文字居中
+                padding-left: 60px;
+            }
+使用伪类给select添加自己想用的图标
+	    -webkit-appearance: none; -moz-appearance: none;background: url(../images/dropdown.png) no-repeat center;
+            background-position: 92% 9px;color: #666; background-color: #fafafa !important;
+
+            div:after{
+                content: "";
+                width: 14px;
+                height: 8px;
+                background: url(img/xiala.png) no-repeat center;
+                //通过定位将图标放在合适的位置
+                position: absolute;
+                right: 20px;
+                top: 45%;
+                //给自定义的图标实现点击下来功能
+                pointer-events: none;
+            }
+select{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: url(../images/icons/arr_down.png) no-repeat scroll right center transparent;
+    background-position: 111px 7px;
+      }
+
+
+
+去掉input number 默认样式
+
+    input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+        -webkit-appearance: none !important;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield; /* firefox */
+    }
+
+
+
+
+10.border-radius兼容
+
+ -moz-border-radius: 15px; /* Firefox */
+ -webkit-border-radius: 15px; /* Safari 和 Chrome */
+ border-radius: 15px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+ -o-border-radius:12px;
+
+11.placeholder兼容
+
+ ::-moz-placeholder{color:red;}              //ff
+ ::-webkit-input-placeholder{color:red;}     //chrome,safari
+ :-ms-input-placeholder{color:red;}          //ie10
+
+12.JavaScript返回上一页代码区别：
+
+   window.history.go(-1);  //返回上一页
+   window.history.back();  //返回上一页
+   //如果要强行刷新的话就是：window.history.back();location.reload();
+   window.location.go(-1); //刷新上一页
+  
+方法一、以按钮点击的方式实现：
+<input type="button" name="Submit" value="返回上一页" onclick="javascript:window.history.back(-1);">
+或者
+<input type="button" name="Submit" value="返回上一页" onclick="javascript:history.back(-1);">
+
+方法二、以图片点击的方式实现：
+<img src="图片的路径" onclick="javascript:window.history.back(-1);" title="返回上一页" alt="返回点击图片" />
+或者
+<img src="图片的路径" onclick="javascript:history.back(-1);" title="返回上一页" alt="返回点击图片" />
+
+方法三、文字点击的方式实现：
+<a href="javascript:history.back(-1)">返回上一页</a>
+或：
+<a href="#" onClick="javascript:history.back(-1);">返回上一页</a>
+
+方法四、图片链接的方式实现：
+<a href="javascript:window.history.back(-1)" target="_self"><img src="图片的路径" /></a>
+或者
+<a href="javascript:history.back(-1)" target="_self"><img src="图片的路径" /></a>
+
+方法五、过几秒钟后返回上一页代码：
+<script language="javascript">setTimeout("window.history.go(-1)",3000)</script> 
+或者
+<script language="javascript">setTimeout("history.go(-1)",3000)</script>
+
+13.jquery 获取滚动条高度  
+  
+获取浏览器显示区域的高度 ：$(window).height();  
+ 
+获取浏览器显示区域的宽度 ：$(window).width();  
+ 
+获取页面的文档高度 ：$(document).height();  
+ 
+获取页面的文档宽度 ：$(document).width();  
+  
+获取滚动条到顶部的垂直高度 ：$(document).scrollTop();  
+ 
+获取滚动条到左边的垂直宽度 ：$(document).scrollLeft();  
+  
+计算元素位置和偏移量：$(id).offset();  
+  
+offset方法是一个很有用的方法，它返回包装集中第一个元素的偏移信息。默认情况下是相对body的偏移信息。结果包含 top和left两个属性。  
+  
+offset(options, results)  
+options.relativeTo
+指定相对计算偏移位置的祖先元素。这个元素应该是relative或absolute定位。省略则相对body。 
+ 
+options.scroll　是否把滚动条计算在内，默认TRUE  
+options.padding 是否把padding计算在内，默认false  
+options.margin  是否把margin计算在内，默认true  
+options.border　是否把边框计算在内，默认true  
+
+14.input更改
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+color:    #fff;
+}
+::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color:    #fff;
+}
+::-ms-input-placeholder { /* Internet Explorer 10-11 */
+color:    #fff;
+}
+
+input的只显示数字的写法
+<input type='text' onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();"  placeholder="输入搜索的号码"  />
+
+15.文字间距
+
+横向：字间距 letter-spacing: .5em;
+纵向：行间距 line-height: 1.5em;
+
+16.calc用法
+
+width:calc(33.3333% - (10px + 5px) * 2 - 15px )
+
+17.CSS3 线性渐变
+语法：
+background: linear-gradient(direction, color-stop1, color-stop2, ...);
+（1）从上到下的线性渐变：
+#grad {
+  background: -webkit-linear-gradient(red, blue); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(red, blue); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(red, blue); /* Firefox 3.6 - 15 */
+  background: linear-gradient(red, blue); /* 标准的语法 */
+}
+（2）从左到右的线性渐变：
+#grad {
+  background: -webkit-linear-gradient(left, red , blue); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, red, blue); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, red, blue); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, red , blue); /* 标准的语法 */
+}
+（3）从左上角到右下角的线性渐变：
+#grad {
+  background: -webkit-linear-gradient(left top, red , blue); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(bottom right, red, blue); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(bottom right, red, blue); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to bottom right, red , blue); /* 标准的语法 */
+}
+（4）使用角度
+background: linear-gradient(angle, color-stop1, color-stop2);
+带有指定的角度的线性渐变：
+#grad {
+  background: -webkit-linear-gradient(180deg, red, blue); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(180deg, red, blue); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(180deg, red, blue); /* Firefox 3.6 - 15 */
+  background: linear-gradient(180deg, red, blue); /* 标准的语法 */
+}
+（5）使用多个颜色结点（带有多个颜色结点的从上到下的线性渐变：）
+#grad {
+  background: -webkit-linear-gradient(red, green, blue); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(red, green, blue); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(red, green, blue); /* Firefox 3.6 - 15 */
+  background: linear-gradient(red, green, blue); /* 标准的语法 */
+}
+（6）带有彩虹颜色和文本的线性渐变：
+#grad {
+  /* Safari 5.1 - 6.0 */
+  background: -webkit-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+  /* Opera 11.1 - 12.0 */
+  background: -o-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+  /* Firefox 3.6 - 15 */
+  background: -moz-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+  /* 标准的语法 */
+  background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+}
+18.background-image
+（1）background-image: url(/images/jt.png);
+（2）background-image: linear-gradient(red, blue);
+（3）background-image: linear-gradient(45deg, red, blue);
+（4）background-image: radial-gradient(green, purple);
+（5）background-image: radial-gradient(circle, green, purple);
+（6）background-image: radial-gradient(circle, green 0%, purple 20%, orange 100%);
+（7）background-image: radial-gradient(circle closest-side, green 0%, purple 20%, orange 100%);
+（8）background-image: radial-gradient(circle closest-side at 45px 45px, green 0%, purple 20%, orange 100%);
+19.list-style
+list-style-position: outside;
+list-style-position: inside;
+
+list-style-image: url(/images/list-style-image.png);
+
+list-style-position: outside;
+list-style-position: inside；
+
+list-style-type: disc;
+list-style-type: circle;
+list-style-type: square;
+list-style-type: decimal;
+
+20.border
+border-style: dotted;
+border-style: dashed;
+border-style: solid;
+border-style: double;
+border-style: groove;
+
+21.overflow-wrap
+overflow-wrap: normal;
+overflow-wrap: break-word;
+
+22.overflow
+
+overflow: visible;
+overflow: hidden;
+overflow: scroll;
+overflow: auto;
+
+overflow-x: visible;
+overflow-x: hidden;
+overflow-x: scroll;
+overflow-x: auto;
+
+overflow-y: visible;
+overflow-y: hidden;
+overflow-y: scroll;
+overflow-y: auto;
+
+23.resize
+resize: none;
+resize: horizontal;
+resize: vertical;
+resize: vertical;
+
+24.text-align: justify;
+
+25.text-overflow
+text-overflow: clip;
+text-overflow: ellipsis;
+
+26.text-shadow: 2px 4px 10px red;
+
+27.图片放大缩小
+.show_details{
+	width: 266px;height: 242px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s;  /*Safari 和 Chrome */
+	-o-transition: all 0.5s;
+}
+.show_details:hover{
+	transform: scale(1.1);
+	-moz-transform:scale(1.1);  
+	-webkit-transform:scale(1.1);  
+	-o-transform:scale(1.1);
+}
+28.transform
+transform: translateX(40px);
+transform: translateY(20px);
+transform: translate(20px, -10%);
+
+transform: scaleX(1.5);
+transform: scaleY(0.4);
+transform: scale(0.8, 0.8);
+
+transform: rotate(45deg);
+
+transform: skewX(15deg);
+transform: skewY(45deg);
+transform: skew(10deg, -20deg);
+
+transform: rotate(5deg) scale(1.1, 1.1) translate(-20%, 30px);
+
+29.fontawesome
+<script src="https://use.fontawesome.com/7558b19e0a.js"></script>
+<i class="fa fa-bandcamp" aria-hidden="true"></i>
+
+30.特殊符号
+&nbsp  -- 空格
+&quot; -- "
+&lt;   -- <
+&gt;   -- >
+
+31.导航跳到指定位置
+<div id="a"></div>
+<a href="#a">点击跳转</a>
+<div id="a">123</div>
+    $(".sideleft ul li a").click(function() {
+        $("html, body").animate({
+        	scrollTop: $($(this).attr("href")).offset().top - 10 + "px"
+        }, 500);
+        return false;
+    });
+
+32.object-fit理解
+.fill { object-fit: fill; }
+.contain { object-fit: contain; }
+.cover { object-fit: cover; }
+.none { object-fit: none; }
+.scale-down { object-fit: scale-down; }
+
+·fill: 中文释义“填充”。默认值。替换内容拉伸填满整个content box, 不保证保持原有的比例。
+·contain: 中文释义“包含”。保持原有尺寸比例。保证替换内容尺寸一定可以在容器里面放得下。因此，此·参数可能会在容器内留下空白。
+·cover: 中文释义“覆盖”。保持原有尺寸比例。保证替换内容尺寸一定大于容器尺寸，宽度和高度至少有一·个和容器一致。因此，此参数可能会让替换内容（如图片）部分区域不可见。
+·none: 中文释义“无”。保持原有尺寸比例。同时保持替换内容原始尺寸大小。
+·scale-down: 中文释义“降低”。就好像依次设置了none或contain, 最终呈现的是尺寸比较小的那个。
+
+33.object-position理解
+（1）object-position要比object-fit单纯的多，就是控制替换内容位置的。默认值是50% 50%，也就是居中效果，所以，无论上一节object-fit值为那般，图片都是水平垂直居中的。因此，下次要实现尺寸大小不固定图片的垂直居中效果，可以试试object-fit.
+（2）与background-position类似，object-position的值类型为<position>类型值。也就是说，CSS3的相对坐标设定样式支持的。
+（3）例如替换内容一直定位在容器的右下角：object-position: 100% 100%;
+（4）例如替换元素相对于右下角20px 10px地方定位：object-position: right 20px bottom 10px;
+（5）因此，建议还是使用calc实现相对右下角定位：object-position: calc(100% - 20px) calc(100% - 10px);
+
+34.display:grid
+(1)父级divdisplay：grid
+(2)grid-template-colums:100px 10px 100px 10px 100px;
+   grid-template-rows:auto 10px auto 10px;
+(3)grid-template-columns: 100px 1fr max-content minmax(min-content, 1fr); 
+·表示有4列，第一列100px固定尺寸，第三列 max-content 代表刚好包含元素不溢出不换行的尺寸，剩下的2列都是弹性尺寸。
+·按照弹性尺寸的计算规则，两者将均分（这两列的弹性系数相等，均为1）剩下的可用空间。
+
+35. target="_blank" 
+
+我们发现test2.html中的js命令window.opener.location="http://www.cnblogs.com/";
+被执行了，导致原来的网站直接打开了cnblogs，这是由于当用户点击了某个网站中带有target="_blank"属性的超链接后，浏览器会单独新建一个标签页来显示该链接所指向的内容。但是请注意，在这一瞬间，浏览器会允许新建的标签页通过一个名为"window.opener"的浏览器API来与之前的网页进行短暂通信。此时，攻击者就可以将恶意代码嵌入在新打开的网站中，然后检测用户是从哪一个网站跳转过来的，最后再利用window.opener接口来迫使原始网页打开一个新的URL地址
+·如何解决呢解决方案是将
+<a href="./test2.html" target="_blank">测试网站</a>
+改为<a href="./test2.html" target="_blank" rel="noopener noreferrer">测试网站</a>
+noreferrer是由于Firefox不支持noopener而添加的
+
+36.background:transparent none repeat scroll 0% 0%;的理解
+
+对于很多人对    BACKGROUND: none transparent scroll repeat 0% 0%;这样的写法是错误的
+
+但是系统会帮你解释成下面这样。
+BACKGROUND:transparent none repeat scroll 0% 0%;
+
+分别代表
+背景属性：背景颜色 背景图片 背景是否重复 背景时候随浏览器滚动 背景水平位置 背景垂直位置
+background : background-color || background-image || background-repeat || background-attachment || background-position 
+
+transparent表示透明无颜色
+none 表示没有设置背景图片
+repeat 表示图片重复
+scroll 表示背景图片随浏览器下拉而滚动
+0%水平位置在x0
+0%垂直位置在y0
+
+37.JQuery获取各种宽度的问题
+
+width() - 返回元素的宽度。
+height() - 返回元素的高度。
+innerWidth() 方法返回元素的宽度（包括内边距）。                     
+innerHeight() 方法返回元素的高度（包括内边距）。                    
+outerWidth() 方法返回元素的宽度（包括内边距和边框）。               
+outerHeight() 方法返回元素的高度（包括内边距和边框）。              
+outerWidth(true) 方法返回元素的宽度（包括内边距、边框和外边距）。   
+outerHeight(true) 方法返回元素的高度（包括内边距、边框和外边距）。  
+返回文档（HTML 文档）$(document).height()的高度
+返回窗口（浏览器视口）$(window).height()的高度
+
+$(window).height(); //浏览器时下窗口可视区域高度
+$(document).height(); //浏览器时下窗口文档的高度
+$(document.body).height();//浏览器时下窗口文档body的高度
+$(document.body).outerHeight(true);//浏览器时下窗口文档body的总高度，包括border padding margin 
+$(window).width(); //浏览器时下窗口可视区域宽度
+$(document).width();//浏览器时下窗口文档对于象宽度
+$(document.body).width();//浏览器时下窗口文档body的高度
+$(document.body).outerWidth(true);//浏览器时下窗口文档body的总宽度 包括border padding margin
+$(document).scrollTop(); //获取滚动条到顶部的垂直高度
+$(document).scrollLeft(); //获取滚动条到左边的垂直宽度
+
+
+38.居中
+（1）<div class="wrap">
+       <div class="inner">html ： 让 inner 居中</div>
+     </div>
+
+     .wrap {
+       float: left; /* 自适应内容宽度 */
+       position: relative;
+       left: 50%; 
+     }
+     .inner {
+  	position: relative;
+  	left: -50%; 
+     }
+分析一下做法：.wrap 使用 float 是为了让 .wrap 的宽度等于 .inner 的宽度让 .wrap 的左边在父层的中线上， 让.inner 的左边相对 .wrap 向左移动一半， 这样就可以实现 .inner 在.wrap 的父层的中间。
+
+作者：lingyired
+链接：https://www.zhihu.com/question/19652330/answer/24592006
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+（2）第一种方法：外层设置相对定位且浮动，left:50%，这样左边位置就偏移到了中间的位置;然后内层设置相对定位，left:-50%，这样正好向左偏移自身宽度的一半，实现了居中。
+     第二种办法：外层使用text-align：center;我们知道text-align:center是让里面的内联元素居中，很显然在外层设置text-align:center后，我们让里面的元素变成内联元素即可，则可以对里面元素使用display:inline-block;*display:inline(兼容IE6-7)。
+
+作者：知乎用户
+链接：https://www.zhihu.com/question/19652330/answer/44933922
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+（3）垂直居中
+     居中1：
+     .demo{
+	display:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-width/2;//负向偏移宽度的一半，如果width不定，需要动态获取。
+	margin-top:-height/2;//原理同上
+     }
+     居中2：该方法中不能有float属性
+    .box{  
+    	position: relative;
+    	display: table-cell;
+    	width: 208px;
+    	height: 60px;
+    	vertical-align: middle;
+    }
+（4）ul li居中
+
+      ul{
+	   overflow: hidden;
+	   display: table;
+           text-align: center;
+           margin: 0 auto;
+      }
+      li{
+	   list-style: none;
+	   float: left;
+	   display: inline-block;
+      }
+39.animation（循环放大缩小）
+
+    div：{
+	animation: pulse 0.6s infinite alternate;
+    }
+
+@-webkit-keyframes pulse {
+	from { -webkit-transform: scale3d(0.5,0.5,1); }
+	to { -webkit-transform: scale3d(1,1,1); }
+}
+
+@keyframes pulse {
+	from { -webkit-transform: scale3d(0.5,0.5,1); transform: scale3d(0.5,0.5,1); }
+	to { -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1); }
+}
+40.字与字之间的间距
+
+CSS: letter-spacing字与字
+　　　word-spacing词与词
+文字与单词间距，样式加这个：letter-spacing:20PX (这是字符与字符，对中 英 适用)
+单词与单词间距，样式加这个：word-spacing :20PX (这是单词与单词)；
+
+41.input只能输入数字
+<input type='text' onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();"  placeholder="输入搜索的号码"  />
+
+42.去滚动条
+（1）::-webkit-scrollbar{
+           display:none;
+       }
+（2）html {
+        -ms-overflow-style:none;
+        overflow:-moz-scrollbars-none;
+    }
+html::-webkit-scrollbar{width:0px}
+
+43.文字省略
+    width: 46px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+44.---横条背景---
+<span class="pla">
+	<span class="pla_ins">华南地区</span>
+</span>
+.pla {
+    width: 101px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    overflow: hidden;
+}
+.pla:after {
+    content: '';
+    display: block;
+    position: relative;
+    top: -7px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 1px;
+    background-color: #ccd1d9;
+}
+.pla_ins {
+    display: inline-block;
+    padding: 0 5px;
+    background-color: #fff;
+    color: #999;
+    position: relative;
+    z-index: 1;
+}
+45.背景图片固定
+.class{
+    background: url(../images/exam-4.jpg) no-repeat top center;
+    height: 456px;
+    background-attachment: fixed;
+}
+46.flex布局
+（1）flex-direction (适用于父类容器的元素上)
+row：横向从左到右排列（左对齐），默认的排列方式。
+row-reverse：反转横向排列（右对齐，从后往前排，最后一项排在最前面。
+column：纵向排列。
+column-reverse：反转纵向排列，从后往前排，最后一项排在最上面。
+
+（2）flex-wrap (适用于父类容器上)
+nowrap：当子元素溢出父容器时不换行。
+wrap：当子元素溢出父容器时自动换行。
+wrap-reverse：反转 wrap 排列。
+
+（3）justify-content (适用于父类容器上)
+flex-start：弹性盒子元素将向行起始位置对齐。该行的第一个子元素的主起始位置的边界将与该行的主起始位置的边界对齐，同时所有后续的伸缩盒项目与其前一个项目对齐。
+flex-end：弹性盒子元素将向行结束位置对齐。该行的第一个子元素的主结束位置的边界将与该行的主结束位置的边界对齐，同时所有后续的伸缩盒项目与其前一个项目对齐。
+center：弹性盒子元素将向行中间位置对齐。该行的子元素将相互对齐并在行中居中对齐，同时第一个元素与行的主起始位置的边距等同与最后一个元素与行的主结束位置的边距（如果剩余空间是负数，则保持两端相等长度的溢出）。
+space-between：弹性盒子元素会平均地分布在行里。如果最左边的剩余空间是负数，或该行只有一个子元素，则该值等效于'flex-start'。在其它情况下，第一个元素的边界与行的主起始位置的边界对齐，同时最后一个元素的边界与行的主结束位置的边距对齐，而剩余的伸缩盒项目则平均分布，并确保两两之间的空白空间相等。
+space-around：弹性盒子元素会平均地分布在行里，两端保留子元素与子元素之间间距大小的一半。如果最左边的剩余空间是负数，或该行只有一个伸缩盒项目，则该值等效于'center'。在其它情况下，伸缩盒项目则平均分布，并确保两两之间的空白空间相等，同时第一个元素前的空间以及最后一个元素后的空间为其他空白空间的一半。
+
+（4）align-items (适用于父类容器上)
+flex-start：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴（纵轴）起始边界。
+flex-end：弹性盒子元素的侧轴（纵轴）结束位置的边界紧靠住该行的侧轴（纵轴）结束边界。
+center：弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。
+baseline：如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。
+stretch：如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。
+
+
+（5）align-content (适用于父类容器上)
+flex-start：各行向弹性盒容器的起始位置堆叠。弹性盒容器中第一行的侧轴起始边界紧靠住该弹性盒容器的侧轴起始边界，之后的每一行都紧靠住前面一行。
+flex-end：各行向弹性盒容器的结束位置堆叠。弹性盒容器中最后一行的侧轴起结束界紧靠住该弹性盒容器的侧轴结束边界，之后的每一行都紧靠住前面一行。
+center：各行向弹性盒容器的中间位置堆叠。各行两两紧靠住同时在弹性盒容器中居中对齐，保持弹性盒容器的侧轴起始内容边界和第一行之间的距离与该容器的侧轴结束内容边界与第最后一行之间的距离相等。（如果剩下的空间是负数，则各行会向两个方向溢出的相等距离。）
+space-between：各行在弹性盒容器中平均分布。如果剩余的空间是负数或弹性盒容器中只有一行，该值等效于'flex-start'。在其它情况下，第一行的侧轴起始边界紧靠住弹性盒容器的侧轴起始内容边界，最后一行的侧轴结束边界紧靠住弹性盒容器的侧轴结束内容边界，剩余的行则按一定方式在弹性盒窗口中排列，以保持两两之间的空间相等。
+space-around：各行在弹性盒容器中平均分布，两端保留子元素与子元素之间间距大小的一半。如果剩余的空间是负数或弹性盒容器中只有一行，该值等效于'center'。在其它情况下，各行会按一定方式在弹性盒容器中排列，以保持两两之间的空间相等，同时第一行前面及最后一行后面的空间是其他空间的一半。
+stretch：各行将会伸展以占用剩余的空间。如果剩余的空间是负数，该值等效于'flex-start'。在其它情况下，剩余空间被所有行平分，以扩大它们的侧轴尺寸。
+
+（6）order (适用于弹性盒模型容器子元素)
+order: <integer>
+<integer>：用整数值来定义排列顺序，数值小的排在前面。可以为负值。
+
+（7）flex-grow (适用于弹性盒模型容器子元素)（是对父级剩余空间进行分配）
+flex-grow: <number> (default 0)
+<number>：用数值来定义扩展比率。不允许负值
+flex-grow的默认值为0，如果没有显示定义该属性，是不会拥有分配剩余空间权利的。本例中b,c两项都显式的定义了flex-grow，可以看到总共将剩余空间分成了4份，其中b占1份，c占3分，即1:3
+
+（8）flex-shrink (适用于弹性盒模型容器子元素)
+flex-shrink: <number> (default 1)
+flex-shrink的默认值为1，如果没有显示定义该属性，将会自动按照默认值1在所有因子相加之后计算比率来进行空间收缩。
+本例中c显式的定义了flex-shrink，a,b没有显式定义，但将根据默认值1来计算，可以看到总共将剩余空间分成了5份，其中a占1份，b占1份，c占3分，即1:1:3
+我们可以看到父容器定义为400px，子项被定义为200px，相加之后即为600px，超出父容器200px。那么这么超出的200px需要被a,b,c消化
+按照以上定义a,b,c将按照1:1:3来分配200px，计算后即可得40px,40px,120px，换句话说，a,b,c各需要消化40px,40px,120px，那么就需要用原定义的宽度相减这个值，最后得出a为160px，b为160px，c为80px
+
+（9）flex-basis(适用于弹性盒模型容器子元素)
+flex-basis: <length> | auto (default auto)
+auto：无特定宽度值，取决于其它属性值
+<length>：用长度值来定义宽度。不允许负值
+<percentage>：用百分比来定义宽度。不允许负值
+.class{
+      -webkit-flex-basis:600px;
+      flex-basis:600px;
+      -webkit-flex-basis:100%;
+      flex-basis:100%;
+}
+
+
+一、browser-sync
+（1）安装node.js
+（2）npm install -g browser-sync
+（3）browser-sync start --server --files "css/*.css, *.html"
+（4）找External: http://192.168.1.47:3000
+
+二、a标签链接
+<a href="tel:10086">10086</a>     //点击后直接拨打10086
+<a href="mailto:c1586@qq.com?subject=TestObject">c6088@qq.com</a>  //点击后直接给c1586@qq.com发邮件，主题为：TestObject           
+<a href="sms:10086?body=message_body">给 10086 发短信</a>          //点击后直接给10086发信息，消息内容默认为message_body   
+<a href="geopoint:116.281469,39.866035">我的位置</a>    //点击后直接发送自己的位置
+
+三、滚动条样式
+ie11 ie10 下滚动条不正常修复
+html{
+	-ms-overflow-style:scrollbar !important;
+}
+手机端滚动条自适应：html { overflow-x: hidden; overflow-y: auto; }
+
+四、JS写返回上一级 
+（1）
+
+      $("XX").on("click",function(){
+
+　　      window.history.go(-1);
+
+      })
+
+（2）
+
+  可根据不同的浏览器，做出不同的判断。
+
+function back(){
+
+　　if($.browser.chrome){
+
+　　　　window.history.go(-1);
+
+　　}else if($.browser.mozilla){
+
+　　　　window.history.go(-2);
+
+     }else {
+
+　　　　window.history.go(-1);
+
+　　}
+
+}
+
+五.刷新页面
+location.reload()
+location=location 
+location.assign(location) 
+location.replace(location)
+
+六.获取当前元素是第几个
+
+$(".pagenum").click(function(){
+     console.log($(".pagenum").index(this));
+});
+
+
+七：正则表达式判断是否为数字  $.isNumeric（"123"）；
+
+
+八：事件委托（js先执行，数据后出来，无法对改数据进行js时）
+
+$(document).delegate('.status_on','mouseenter',function(){
+    $(this).html('点击禁用');
+    $(this).css('color','red');
+});
+$(document).delegate('.status_on','mouseleave',function(){
+    $(this).html('已激活');
+    $(this).css('color','green');
+});
+
+九：去除input[typt = number]默认样式
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+  	-webkit-appearance: none !important;  /* chrome */
+}
+input[type="number"]{
+  	-moz-appearance:textfield;/* firefox */
+}
+
+
+
+
+
+
+
+
+

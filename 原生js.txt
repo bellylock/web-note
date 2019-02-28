@@ -1,0 +1,163 @@
+1. JS选取DOM元素的方法
+注意：原生JS选取DOM元素比使用jQuery类库选取要快很多
+（1）通过ID选取元素
+document.getElementById('myid');
+（2）通过CLASS选取元素
+document.getElementsByClassName('myclass')[0];
+（3）通过标签选取元素
+document.getElementsByTagName('mydiv')[0];
+（4）通过NAME属性选取元素（常用于表单）
+document.getElementsByName('myname')[0];
+
+
+<! --懒加载开始 -->
+<img _src="images/1.jpg" />
+<img _src="images/1.jpg" />
+<img _src="images/1.jpg" />
+
+（5）获取滚动距离
+var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+（6）获取可视区高度
+var height = document.documentElement.clientHeight;
+（7）获取可视区底部 
+ var bottom = scrollTop + height;
+
+懒加载时：
+var aImg = document.getElementsByClassName("img");
+for( var i = 0; i < aImg.length; i++ ){
+	var _src = aImg[i].getAttribute("_src");
+	var top = aImg[i].offsetTop;
+	if( top <= bottom ){
+		aImg[i].scr = _src;
+	}
+}
+
+<!-- 懒加载结束 -->
+
+        var h = document.querySelector(".showimg").offsetTop;   //距离浏览器顶部距离
+        var a = document.body.clientHeight;
+        var b = document.documentElement.clientHeight; //浏览器窗口的高度
+        var c = window.innerHeight;                      //浏览器窗口的高度
+        var d = document.documentElement.offsetHeight;  // document文档的高度
+        var e = $('html,body').height();                    //document文档的高度
+
+
+写法一：
+    var obj=document.getElementById("aas");
+    var value = obj.innerHTML;
+    console.log(value);
+
+写法二：
+    var obj = document.getElementsByClassName('aas');
+    var value = obj[1].innerHTML;
+    console.log(value);
+
+写法三：
+    var obj = document.querySelector(".aas");
+    var value = obj.innerHTML;
+    console.log(value);
+
+写法四：
+    var obj = document.querySelectorAll(".aas");
+    var value = obj[1].innerHTML;
+    console.log(value);
+
+点击事件 法一：
+    obj[0].onclick = function(){
+        alert(159963)
+    }
+
+点击事件 法二：
+    obj[0].addEventListener("click",function(){
+        alert(123456)
+    });
+
+
+2. JS修改CSS样式
+document.getElementById('myid').style.display = 'none';
+top.style.cssText = "height:dis;";
+
+js获取样式兼容ie写法
+var div = document.getElementById('top');
+    document.getElementById("line").addEventListener("click",function(){
+        if (div.currentStyle) {
+            console.log(div.currentStyle.height);
+        }else{
+            console.log(getComputedStyle(div).height);
+        }
+    });
+
+
+JS修改CLASS属性
+document.getElementById('myid').className = 'active';
+如果有多个CLASS属性，即用空格隔开
+document.getElementById('myid').className = 'active div-1';
+移除该元素上的所有CLASS
+document.getElementById('myid').className = '';
+注意：使用classList会优于使用className
+document.getElementById('myid').classList.item(0);//item为类名的索引
+document.getElementById('myid').classList.length;//只读属性
+document.getElementById('myid').classList.add('newClass');//添加class
+document.getElementById('myid').classList.remove('newClass');//移除class
+document.getElementById('myid').classList.toggle('newClass');//切换，有则移除，没有则添加
+document.getElementById('myid').classList.contains('newClass');//判断是否存在该class
+补充：add和remove方法不允许链式操作，因为返回的都是undefined，其次，也不允许同时添加或删除多个class，可以自行扩展一下
+
+
+JS修改文本
+document.getElementById('myid').innerHTML = '123';
+
+
+JS创建元素并向其中追加文本
+var newdiv = document.createElement('div');
+var newtext = document.createTextNode('123');
+newdiv.appendChild(newtext);
+document.body.appendChild(newdiv);
+同理：removeChild()移除节点，并返回节点
+cloneNode()复制节点
+insertBefore()插入节点（父节点内容的最前面）
+注意：insertBefore()有两个参数，第一个是插入的节点，第二个是插入的位置
+例子：
+var list = document.getElementById('myList');
+list.insertBefore(newItem,list.childNodes[1]);
+//插入新节点newItem到list的第二个子节点
+
+
+JS返回所有子节点对象childNodes
+var mylist = document.getElementById('myid');
+for(var i=0,i<mylist.childNodes.length;i++){
+console.log(mylist.childNodes[i]);
+}
+firstChild返回第一个子节点
+lastChild返回最后一个子节点
+parentNode返回父节点对象
+nextSibling返回下一个兄弟节点对象
+previousSibling返回前一个兄弟节点对象
+nodeName返回节点的HTML标记名称
+
+
+3.获取当前元素是第几个
+
+$(".pagenum").click(function(){
+     console.log($(".pagenum").index(this));
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

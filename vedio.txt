@@ -1,0 +1,15 @@
+H5视频、音频不能自动播放,Uncaught (in promise) DOMException: play() failed because the user didn't
+
+错误原因：Chrome的autoplay政策在2018年4月做了更改。
+
+解决办法：
+
+第一步，在chrome浏览器中输入：chrome://flags/#autoplay-policy
+
+
+第二步，在Autoplay policy中将Default改为No user gesture is required
+
+第三步，点击下方的“RELAUNCH NOW”,就大功告成了！
+
+chrome://flags/#autoplay-policy
+

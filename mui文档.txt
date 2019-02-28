@@ -1,0 +1,116 @@
+1.区域滚动
+没有侧滑栏时，用mui-scroll-wrapper包裹mui-scroll就可以实现滚动，如果有侧边栏时，需要写scroll的js来控制
+
+（1）
+mui('.mui-scroll-wrapper').scroll({
+	deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+});
+
+（2）
+(function($){
+	$(".mui-scroll-wrapper").scroll({
+		bounce: false,//滚动条是否有弹力默认是true
+		indicators: true //是否显示滚动条,默认是true 
+	});
+			    
+})(mui);
+
+2.自动轮播
+	var gallery = mui('#slider');
+	gallery.slider({
+		interval:2000
+	});
+
+3.判断div是否有class并加动态class
+document.getElementById("knowledges").addEventListener('tap',function(){
+	if(
+		document.getElementById("knowledges").classList != 'next_right'
+				){
+		document.getElementById("knowledges").classList.add('next_right');
+		document.getElementById("knowledges").classList.remove('drop_down');
+		document.getElementById("drop1").style.display = "none";
+		document.getElementById("drop2").style.display = "none"
+	}else{
+		document.getElementById("knowledges").classList.remove('next_right');
+		document.getElementById("knowledges").classList.add('drop_down');
+		document.getElementById("drop1").style.display = "block";
+		document.getElementById("drop2").style.display = "block"
+	}
+				
+});
+
+4.打开新页面属性
+（一、 单独打开一个页面）
+document.getElementById("home").addEventListener('tap',function(){
+	mui.openWindow({
+		id:"home",
+		url:"index.html",
+		createNew:true,//是否重复创建同样id的webview，默认为false:不重复创建，直接显示
+		show:{
+		     autoShow:true,//页面loaded事件发生后自动显示，默认为true
+		     aniShow:"slide-in-right",//页面显示动画，默认为”slide-in-right“；
+		     duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+	        },
+		waiting:{
+		     autoShow:true,//自动显示等待框，默认为true
+		}
+	})
+});
+
+（二、 相同class打开同一个页面）
+mui(".tail").on("tap",".eva",function(){
+      mui.openWindow({
+           id:"eva",
+           url:"evaluation.html"
+      })
+});
+
+5.兼容ie
+IE9 以下版本浏览器兼容HTML5的方法，使用本站的静态资源的html5shiv包：
+<!--[if lt IE 9]>
+    <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]-->
+
+载入后，初始化新标签的CSS：
+/*html5*/
+article,aside,dialog,footer,header,section,nav,figure,menu{display:block}
+
+6.解决mui下a标签不能跳转问题
+mui('body').on('tap','a',function(){ 
+	window.top.location.href=this.href; 
+});
+
+7.监听tap事件，解决 a标签 不能跳转页面问题 
+mui('body').on('tap','.skip',function(){document.location.href=this.href;});			
+		
+8.解决其他页面也有下拉刷新的方法，在写下拉刷新的页面中写该方法
+mui('body').on('tap','a',function(){plus.webview.open(this.href);});
+
+注意：解决a标签不能跳转的方法不能与解决其他页面下拉刷新的方法同时出现,会冲突
+
+9.禁止滑动主界面的时候出现侧滑菜单
+document.getElementsByClassName('mui-inner-wrap')[0].addEventListener('drag', function(event) {
+	event.stopPropagation();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
