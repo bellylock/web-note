@@ -1,5 +1,4 @@
-1.°²×°node.js
+1.å®‰è£…node.js
 2.npm install -g browser-sync
 3.browser-sync start --server --files "css/*.css, *.html"
-4.ÕÒExternal: http://192.168.1.47:3000
-
+4.æ‰¾External: http://192.168.1.47:3000
