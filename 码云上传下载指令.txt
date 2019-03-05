@@ -1,0 +1,23 @@
+一、码云上传文件
+
+1.先在码云创建仓库（名称假设为：test）
+
+2.复制仓库地址 ---https://gitee.com/xiaohaoy/done.git
+
+3.在桌面新建文件夹（box）
+
+4.在box里面使用git bush 或者 cmder 下载 test仓库
+例如：git clone https://gitee.com/xiaohaoy/done.git
+
+5.在box文件下 cd test，把要上传的文件放到该文件夹下，执行下面指令：
+（1）git add .
+（2）git commit -m 'test1'
+（3）git push
+
+
+二、下载码云文件
+
+1.复制要下载文件的地址：https://gitee.com/xiaohaoy/done.git
+
+2.新建文件夹，在文件夹里面执行：
+git clone https://gitee.com/xiaohaoy/done.git
