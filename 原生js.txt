@@ -9,50 +9,6 @@ document.getElementsByTagName('mydiv')[0];
 （4）通过NAME属性选取元素（常用于表单）
 document.getElementsByName('myname')[0];
 
-
-窗口的可视高度
-var clientHeight = document.documentElement.clientHeight;
-
-滚动条滚动的距离
-var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-
-最大的滚动距离（窗口文本的高度）
-var scrollHeight = document.body.scrollHeight;
-
-滚动条滚动时
-window.onscroll = function(){
-    当滚动到页面最底部时
-    if(clientHeight + scrollTop + 5 >= scrollHeight){
-        function();
-    }
-}
-
-
-
-<! --懒加载开始 -->
-<img _src="images/1.jpg" />
-<img _src="images/1.jpg" />
-<img _src="images/1.jpg" />
-
-（5）获取滚动距离
-var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-（6）获取可视区高度
-var height = document.documentElement.clientHeight;
-（7）获取可视区底部 
- var bottom = scrollTop + height;
-
-懒加载时：
-var aImg = document.getElementsByClassName("img");
-for( var i = 0; i < aImg.length; i++ ){
-	var _src = aImg[i].getAttribute("_src");
-	var top = aImg[i].offsetTop;
-	if( top <= bottom ){
-		aImg[i].scr = _src;
-	}
-}
-
-<!-- 懒加载结束 -->
-
         var h = document.querySelector(".showimg").offsetTop;   //距离浏览器顶部距离
         var a = document.body.clientHeight;
         var b = document.documentElement.clientHeight; //浏览器窗口的高度
@@ -60,7 +16,9 @@ for( var i = 0; i < aImg.length; i++ ){
         var d = document.documentElement.offsetHeight;  // document文档的高度
         var e = $('html,body').height();                    //document文档的高度
 
-
+（5）document.querySelector(".class");
+     document.querySelectAll(".class");
+     
 写法一：
     var obj=document.getElementById("aas");
     var value = obj.innerHTML;
@@ -94,17 +52,17 @@ for( var i = 0; i < aImg.length; i++ ){
 
 2. JS修改CSS样式
 document.getElementById('myid').style.display = 'none';
-top.style.cssText = "height:dis;";
+top.style.cssText = "height:dis;"; 
 
 js获取样式兼容ie写法
 var div = document.getElementById('top');
-    document.getElementById("line").addEventListener("click",function(){
-        if (div.currentStyle) {
-            console.log(div.currentStyle.height);
-        }else{
-            console.log(getComputedStyle(div).height);
-        }
-    });
+document.getElementById("line").addEventListener("click",function(){
+     if (div.currentStyle) {
+          console.log(div.currentStyle.height);
+     }else{
+          console.log(getComputedStyle(div).height);
+     }
+});
 
 
 JS修改CLASS属性
@@ -179,6 +137,51 @@ $(".pagenum").click(function(){
 元素的实际宽度：document.getElementById("div").offsetWidth
 元素的实际距离左边界的距离：document.getElementById("div").offsetLeft
 元素的实际距离上边界的距离：document.getElementById("div").offsetTop
+
+
+5.瀑布流懒加载
+窗口的可视高度
+var clientHeight = document.documentElement.clientHeight;
+
+滚动条滚动的距离
+var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+最大的滚动距离（窗口文本的高度）
+var scrollHeight = document.body.scrollHeight;
+
+滚动条滚动时
+window.onscroll = function(){
+    当滚动到页面最底部时
+    if(clientHeight + scrollTop + 5 >= scrollHeight){
+        function();
+    }
+}
+
+
+
+<! --懒加载开始 -->
+<img _src="images/1.jpg" />
+<img _src="images/1.jpg" />
+<img _src="images/1.jpg" />
+
+（5）获取滚动距离
+var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+（6）获取可视区高度
+var height = document.documentElement.clientHeight;
+（7）获取可视区底部 
+ var bottom = scrollTop + height;
+
+懒加载时：
+var aImg = document.getElementsByClassName("img");
+for( var i = 0; i < aImg.length; i++ ){
+	var _src = aImg[i].getAttribute("_src");
+	var top = aImg[i].offsetTop;
+	if( top <= bottom ){
+		aImg[i].scr = _src;
+	}
+}
+
+<!-- 懒加载结束 -->
 
 
 
