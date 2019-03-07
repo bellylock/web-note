@@ -10,6 +10,25 @@ document.getElementsByTagName('mydiv')[0];
 document.getElementsByName('myname')[0];
 
 
+窗口的可视高度
+var clientHeight = document.documentElement.clientHeight;
+
+滚动条滚动的距离
+var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+最大的滚动距离（窗口文本的高度）
+var scrollHeight = document.body.scrollHeight;
+
+滚动条滚动时
+window.onscroll = function(){
+    当滚动到页面最底部时
+    if(clientHeight + scrollTop + 5 >= scrollHeight){
+        function();
+    }
+}
+
+
+
 <! --懒加载开始 -->
 <img _src="images/1.jpg" />
 <img _src="images/1.jpg" />
