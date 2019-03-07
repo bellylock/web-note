@@ -1,28 +1,28 @@
-1. JSÑ¡È¡DOMÔªËØµÄ·½·¨
-×¢Òâ£ºÔ­ÉúJSÑ¡È¡DOMÔªËØ±ÈÊ¹ÓÃjQueryÀà¿âÑ¡È¡Òª¿ìºÜ¶à
-£¨1£©Í¨¹ıIDÑ¡È¡ÔªËØ
+1. JSé€‰å–DOMå…ƒç´ çš„æ–¹æ³•
+æ³¨æ„ï¼šåŸç”ŸJSé€‰å–DOMå…ƒç´ æ¯”ä½¿ç”¨jQueryç±»åº“é€‰å–è¦å¿«å¾ˆå¤š
+ï¼ˆ1ï¼‰é€šè¿‡IDé€‰å–å…ƒç´ 
 document.getElementById('myid');
-£¨2£©Í¨¹ıCLASSÑ¡È¡ÔªËØ
+ï¼ˆ2ï¼‰é€šè¿‡CLASSé€‰å–å…ƒç´ 
 document.getElementsByClassName('myclass')[0];
-£¨3£©Í¨¹ı±êÇ©Ñ¡È¡ÔªËØ
+ï¼ˆ3ï¼‰é€šè¿‡æ ‡ç­¾é€‰å–å…ƒç´ 
 document.getElementsByTagName('mydiv')[0];
-£¨4£©Í¨¹ıNAMEÊôĞÔÑ¡È¡ÔªËØ£¨³£ÓÃÓÚ±íµ¥£©
+ï¼ˆ4ï¼‰é€šè¿‡NAMEå±æ€§é€‰å–å…ƒç´ ï¼ˆå¸¸ç”¨äºè¡¨å•ï¼‰
 document.getElementsByName('myname')[0];
 
 
-<! --ÀÁ¼ÓÔØ¿ªÊ¼ -->
+<! --æ‡’åŠ è½½å¼€å§‹ -->
 <img _src="images/1.jpg" />
 <img _src="images/1.jpg" />
 <img _src="images/1.jpg" />
 
-£¨5£©»ñÈ¡¹ö¶¯¾àÀë
+ï¼ˆ5ï¼‰è·å–æ»šåŠ¨è·ç¦»
 var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-£¨6£©»ñÈ¡¿ÉÊÓÇø¸ß¶È
+ï¼ˆ6ï¼‰è·å–å¯è§†åŒºé«˜åº¦
 var height = document.documentElement.clientHeight;
-£¨7£©»ñÈ¡¿ÉÊÓÇøµ×²¿ 
+ï¼ˆ7ï¼‰è·å–å¯è§†åŒºåº•éƒ¨ 
  var bottom = scrollTop + height;
 
-ÀÁ¼ÓÔØÊ±£º
+æ‡’åŠ è½½æ—¶ï¼š
 var aImg = document.getElementsByClassName("img");
 for( var i = 0; i < aImg.length; i++ ){
 	var _src = aImg[i].getAttribute("_src");
@@ -32,52 +32,52 @@ for( var i = 0; i < aImg.length; i++ ){
 	}
 }
 
-<!-- ÀÁ¼ÓÔØ½áÊø -->
+<!-- æ‡’åŠ è½½ç»“æŸ -->
 
-        var h = document.querySelector(".showimg").offsetTop;   //¾àÀëä¯ÀÀÆ÷¶¥²¿¾àÀë
+        var h = document.querySelector(".showimg").offsetTop;   //è·ç¦»æµè§ˆå™¨é¡¶éƒ¨è·ç¦»
         var a = document.body.clientHeight;
-        var b = document.documentElement.clientHeight; //ä¯ÀÀÆ÷´°¿ÚµÄ¸ß¶È
-        var c = window.innerHeight;                      //ä¯ÀÀÆ÷´°¿ÚµÄ¸ß¶È
-        var d = document.documentElement.offsetHeight;  // documentÎÄµµµÄ¸ß¶È
-        var e = $('html,body').height();                    //documentÎÄµµµÄ¸ß¶È
+        var b = document.documentElement.clientHeight; //æµè§ˆå™¨çª—å£çš„é«˜åº¦
+        var c = window.innerHeight;                      //æµè§ˆå™¨çª—å£çš„é«˜åº¦
+        var d = document.documentElement.offsetHeight;  // documentæ–‡æ¡£çš„é«˜åº¦
+        var e = $('html,body').height();                    //documentæ–‡æ¡£çš„é«˜åº¦
 
 
-Ğ´·¨Ò»£º
+å†™æ³•ä¸€ï¼š
     var obj=document.getElementById("aas");
     var value = obj.innerHTML;
     console.log(value);
 
-Ğ´·¨¶ş£º
+å†™æ³•äºŒï¼š
     var obj = document.getElementsByClassName('aas');
     var value = obj[1].innerHTML;
     console.log(value);
 
-Ğ´·¨Èı£º
+å†™æ³•ä¸‰ï¼š
     var obj = document.querySelector(".aas");
     var value = obj.innerHTML;
     console.log(value);
 
-Ğ´·¨ËÄ£º
+å†™æ³•å››ï¼š
     var obj = document.querySelectorAll(".aas");
     var value = obj[1].innerHTML;
     console.log(value);
 
-µã»÷ÊÂ¼ş ·¨Ò»£º
+ç‚¹å‡»äº‹ä»¶ æ³•ä¸€ï¼š
     obj[0].onclick = function(){
         alert(159963)
     }
 
-µã»÷ÊÂ¼ş ·¨¶ş£º
+ç‚¹å‡»äº‹ä»¶ æ³•äºŒï¼š
     obj[0].addEventListener("click",function(){
         alert(123456)
     });
 
 
-2. JSĞŞ¸ÄCSSÑùÊ½
+2. JSä¿®æ”¹CSSæ ·å¼
 document.getElementById('myid').style.display = 'none';
 top.style.cssText = "height:dis;";
 
-js»ñÈ¡ÑùÊ½¼æÈİieĞ´·¨
+jsè·å–æ ·å¼å…¼å®¹ieå†™æ³•
 var div = document.getElementById('top');
     document.getElementById("line").addEventListener("click",function(){
         if (div.currentStyle) {
@@ -88,61 +88,78 @@ var div = document.getElementById('top');
     });
 
 
-JSĞŞ¸ÄCLASSÊôĞÔ
+JSä¿®æ”¹CLASSå±æ€§
 document.getElementById('myid').className = 'active';
-Èç¹ûÓĞ¶à¸öCLASSÊôĞÔ£¬¼´ÓÃ¿Õ¸ñ¸ô¿ª
+å¦‚æœæœ‰å¤šä¸ªCLASSå±æ€§ï¼Œå³ç”¨ç©ºæ ¼éš”å¼€
 document.getElementById('myid').className = 'active div-1';
-ÒÆ³ı¸ÃÔªËØÉÏµÄËùÓĞCLASS
+ç§»é™¤è¯¥å…ƒç´ ä¸Šçš„æ‰€æœ‰CLASS
 document.getElementById('myid').className = '';
-×¢Òâ£ºÊ¹ÓÃclassList»áÓÅÓÚÊ¹ÓÃclassName
-document.getElementById('myid').classList.item(0);//itemÎªÀàÃûµÄË÷Òı
-document.getElementById('myid').classList.length;//Ö»¶ÁÊôĞÔ
-document.getElementById('myid').classList.add('newClass');//Ìí¼Óclass
-document.getElementById('myid').classList.remove('newClass');//ÒÆ³ıclass
-document.getElementById('myid').classList.toggle('newClass');//ÇĞ»»£¬ÓĞÔòÒÆ³ı£¬Ã»ÓĞÔòÌí¼Ó
-document.getElementById('myid').classList.contains('newClass');//ÅĞ¶ÏÊÇ·ñ´æÔÚ¸Ãclass
-²¹³ä£ºaddºÍremove·½·¨²»ÔÊĞíÁ´Ê½²Ù×÷£¬ÒòÎª·µ»ØµÄ¶¼ÊÇundefined£¬Æä´Î£¬Ò²²»ÔÊĞíÍ¬Ê±Ìí¼Ó»òÉ¾³ı¶à¸öclass£¬¿ÉÒÔ×ÔĞĞÀ©Õ¹Ò»ÏÂ
+æ³¨æ„ï¼šä½¿ç”¨classListä¼šä¼˜äºä½¿ç”¨className
+document.getElementById('myid').classList.item(0);//itemä¸ºç±»åçš„ç´¢å¼•
+document.getElementById('myid').classList.length;//åªè¯»å±æ€§
+document.getElementById('myid').classList.add('newClass');//æ·»åŠ class
+document.getElementById('myid').classList.remove('newClass');//ç§»é™¤class
+document.getElementById('myid').classList.toggle('newClass');//åˆ‡æ¢ï¼Œæœ‰åˆ™ç§»é™¤ï¼Œæ²¡æœ‰åˆ™æ·»åŠ 
+document.getElementById('myid').classList.contains('newClass');//åˆ¤æ–­æ˜¯å¦å­˜åœ¨è¯¥class
+è¡¥å……ï¼šaddå’Œremoveæ–¹æ³•ä¸å…è®¸é“¾å¼æ“ä½œï¼Œå› ä¸ºè¿”å›çš„éƒ½æ˜¯undefinedï¼Œå…¶æ¬¡ï¼Œä¹Ÿä¸å…è®¸åŒæ—¶æ·»åŠ æˆ–åˆ é™¤å¤šä¸ªclassï¼Œå¯ä»¥è‡ªè¡Œæ‰©å±•ä¸€ä¸‹
 
 
-JSĞŞ¸ÄÎÄ±¾
+JSä¿®æ”¹æ–‡æœ¬
 document.getElementById('myid').innerHTML = '123';
 
 
-JS´´½¨ÔªËØ²¢ÏòÆäÖĞ×·¼ÓÎÄ±¾
+JSåˆ›å»ºå…ƒç´ å¹¶å‘å…¶ä¸­è¿½åŠ æ–‡æœ¬
 var newdiv = document.createElement('div');
 var newtext = document.createTextNode('123');
 newdiv.appendChild(newtext);
 document.body.appendChild(newdiv);
-Í¬Àí£ºremoveChild()ÒÆ³ı½Úµã£¬²¢·µ»Ø½Úµã
-cloneNode()¸´ÖÆ½Úµã
-insertBefore()²åÈë½Úµã£¨¸¸½ÚµãÄÚÈİµÄ×îÇ°Ãæ£©
-×¢Òâ£ºinsertBefore()ÓĞÁ½¸ö²ÎÊı£¬µÚÒ»¸öÊÇ²åÈëµÄ½Úµã£¬µÚ¶ş¸öÊÇ²åÈëµÄÎ»ÖÃ
-Àı×Ó£º
+åŒç†ï¼šremoveChild()ç§»é™¤èŠ‚ç‚¹ï¼Œå¹¶è¿”å›èŠ‚ç‚¹
+cloneNode()å¤åˆ¶èŠ‚ç‚¹
+insertBefore()æ’å…¥èŠ‚ç‚¹ï¼ˆçˆ¶èŠ‚ç‚¹å†…å®¹çš„æœ€å‰é¢ï¼‰
+æ³¨æ„ï¼šinsertBefore()æœ‰ä¸¤ä¸ªå‚æ•°ï¼Œç¬¬ä¸€ä¸ªæ˜¯æ’å…¥çš„èŠ‚ç‚¹ï¼Œç¬¬äºŒä¸ªæ˜¯æ’å…¥çš„ä½ç½®
+ä¾‹å­ï¼š
 var list = document.getElementById('myList');
 list.insertBefore(newItem,list.childNodes[1]);
-//²åÈëĞÂ½ÚµãnewItemµ½listµÄµÚ¶ş¸ö×Ó½Úµã
+//æ’å…¥æ–°èŠ‚ç‚¹newItemåˆ°listçš„ç¬¬äºŒä¸ªå­èŠ‚ç‚¹
 
 
-JS·µ»ØËùÓĞ×Ó½Úµã¶ÔÏóchildNodes
+JSè¿”å›æ‰€æœ‰å­èŠ‚ç‚¹å¯¹è±¡childNodes
 var mylist = document.getElementById('myid');
 for(var i=0,i<mylist.childNodes.length;i++){
 console.log(mylist.childNodes[i]);
 }
-firstChild·µ»ØµÚÒ»¸ö×Ó½Úµã
-lastChild·µ»Ø×îºóÒ»¸ö×Ó½Úµã
-parentNode·µ»Ø¸¸½Úµã¶ÔÏó
-nextSibling·µ»ØÏÂÒ»¸öĞÖµÜ½Úµã¶ÔÏó
-previousSibling·µ»ØÇ°Ò»¸öĞÖµÜ½Úµã¶ÔÏó
-nodeName·µ»Ø½ÚµãµÄHTML±ê¼ÇÃû³Æ
+firstChildè¿”å›ç¬¬ä¸€ä¸ªå­èŠ‚ç‚¹
+lastChildè¿”å›æœ€åä¸€ä¸ªå­èŠ‚ç‚¹
+parentNodeè¿”å›çˆ¶èŠ‚ç‚¹å¯¹è±¡
+nextSiblingè¿”å›ä¸‹ä¸€ä¸ªå…„å¼ŸèŠ‚ç‚¹å¯¹è±¡
+previousSiblingè¿”å›å‰ä¸€ä¸ªå…„å¼ŸèŠ‚ç‚¹å¯¹è±¡
+nodeNameè¿”å›èŠ‚ç‚¹çš„HTMLæ ‡è®°åç§°
 
 
-3.»ñÈ¡µ±Ç°ÔªËØÊÇµÚ¼¸¸ö
+3.è·å–å½“å‰å…ƒç´ æ˜¯ç¬¬å‡ ä¸ª
 
 $(".pagenum").click(function(){
      console.log($(".pagenum").index(this));
 });
 
 
+4.javascriptä¸­è·å–domå…ƒç´ é«˜åº¦å’Œå®½åº¦çš„æ–¹æ³•å¦‚ä¸‹ï¼š
+
+ç½‘é¡µå¯è§åŒºåŸŸå®½ï¼š document.body.clientWidth
+ç½‘é¡µå¯è§åŒºåŸŸé«˜ï¼š document.body.clientHeight
+ç½‘é¡µå¯è§åŒºåŸŸå®½ï¼š document.body.offsetWidth (åŒ…æ‹¬è¾¹çº¿çš„å®½)
+ç½‘é¡µå¯è§åŒºåŸŸé«˜ï¼š document.body.offsetHeight (åŒ…æ‹¬è¾¹çº¿çš„é«˜)
+ç½‘é¡µæ­£æ–‡å…¨æ–‡å®½ï¼š document.body.scrollWidth
+ç½‘é¡µæ­£æ–‡å…¨æ–‡é«˜ï¼š document.body.scrollHeight
+ç½‘é¡µè¢«å·å»çš„é«˜ï¼š document.body.scrollTop
+ç½‘é¡µè¢«å·å»çš„å·¦ï¼š document.body.scrollLeft
+
+å¯¹åº”çš„domå…ƒç´ çš„å®½é«˜æœ‰ä»¥ä¸‹å‡ ä¸ªå¸¸ç”¨çš„ï¼š
+
+å…ƒç´ çš„å®é™…é«˜åº¦ï¼šdocument.getElementById("div").offsetHeight
+å…ƒç´ çš„å®é™…å®½åº¦ï¼šdocument.getElementById("div").offsetWidth
+å…ƒç´ çš„å®é™…è·ç¦»å·¦è¾¹ç•Œçš„è·ç¦»ï¼šdocument.getElementById("div").offsetLeft
+å…ƒç´ çš„å®é™…è·ç¦»ä¸Šè¾¹ç•Œçš„è·ç¦»ï¼šdocument.getElementById("div").offsetTop
 
 
 
