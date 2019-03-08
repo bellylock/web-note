@@ -1,0 +1,397 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+<meta http-equiv=X-UA-Compatible content=IE=EmulateIE7>
+
+-moz-对应 Firefox, 
+-webkit-对应 Safari and Chrome
+-o- for Opera
+-ms- for Internet Explorer
+
+<body>
+	<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+	<!--[if lt IE 9]>
+  		<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  		<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<div class="browser-happy">
+    		<div class="content">
+        		<p>作为前端开发人员，还有这么low的浏览器，再不更新会遭鄙视的～～</p>
+        		<a href="http://browsehappy.com/">立即更新</a>
+    		</div>
+	</div>
+	<![endif]-->
+
+</body>
+
+
+1.border-radius
+	border-radius: 3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-ms-border-radius:3px;
+	behavior:url(pie/PIE.htc);
+
+2.box-shadow
+	box-shadow: 1px 1px 8px red;
+	-moz-box-shadow: 1px 1px 8px red;
+	-webkit-box-shadow: 1px 1px 8px red;
+	-ms-box-shadow: 1px 1px 8px red;
+	behavior:url(pie/PIE.htc);
+
+3.placeholder兼容
+	//placehlder兼容 法一
+    	if( !('placeholder' in document.createElement('input')) ){     
+              $('input[placeholder],textarea[placeholder]').each(function(){      
+                var that = $(this),      
+                text= that.attr('placeholder');      
+                if(that.val()===""){      
+                  that.val(text).addClass('placeholder');      
+                }      
+                that.focus(function(){   
+                  if(that.val()===text){  
+                    that.val("").removeClass('placeholder');      
+                  }      
+                })      
+                .blur(function(){      
+                  if(that.val()===""){      
+                    that.val(text).addClass('placeholder');      
+                  }      
+                })      
+                .closest('form').submit(function(){      
+                  if(that.val() === text){      
+                    that.val('');      
+                  }      
+                });      
+              });    
+        };
+
+	<!-- 兼容ie placeholder  法二 -->
+	<!--<script src="http://hovertree.com/texiao/jquery/43/jquery.JPlaceholder.js"></script>
+	<script type="text/javascript" src="js/jianrong_placeholder.js"></script> -->
+
+placeholder兼容  法三
+
+//   兼容ie9的placeholder
+function isPlaceholder(){
+    var input = document.createElement('input');
+    return 'placeholder' in input;
+}
+if (!isPlaceholder()) {//不支持placeholder 用jquery来完成
+    $(document).ready(function() {
+        if(!isPlaceholder()){
+            $("input").not("input[type='password']").each(//把input绑定事件 排除password框
+                    function(){
+                        if($(this).val()=="" && $(this).attr("placeholder")!=""){
+                            $(this).val($(this).attr("placeholder"));
+                            $(this).focus(function(){
+                                if($(this).val()==$(this).attr("placeholder")) $(this).val("");
+                            });
+                            $(this).blur(function(){
+                                if($(this).val()=="") $(this).val($(this).attr("placeholder"));
+                            });
+                        }
+                    });
+            //对password框的特殊处理1.创建一个text框 2获取焦点和失去焦点的时候切换
+            $("input[type='password']").each(
+                    function() {
+                        var pwdField    = $(this);
+                        var pwdVal      = pwdField.attr('placeholder');
+                        pwdField.after('<input  class="login-input" type="text" value='+pwdVal+' autocomplete="off" />');
+                        var pwdPlaceholder = $(this).siblings('.login-input');
+                        pwdPlaceholder.show();
+                        pwdField.hide();
+
+                        pwdPlaceholder.focus(function(){
+                            pwdPlaceholder.hide();
+                            pwdField.show();
+                            pwdField.focus();
+                        });
+
+                        pwdField.blur(function(){
+                            if(pwdField.val() == '') {
+                                pwdPlaceholder.show();
+                                pwdField.hide();
+                            }
+                        });
+                    })
+        }
+    });
+}
+
+//placeholder 兼容 法四
+if(!placeholderSupport()){   // 判断浏览器是否支持 placeholder 不支持则执行一下自定义代码
+        $('[placeholder]').focus(function() {
+            var input = $(this);
+            //判断如果你密码框，获取焦点之后属性修改为密码框 如果没有密码框此处判断可以删除 一下同理
+            if(input[0].id=='userPassword'){
+                input.prop('type','password');
+            }
+            if (input.val() == input.attr('placeholder')) {
+                input.val('');
+                input.removeClass('placeholder');
+            }
+        }).blur(function() {
+            var input = $(this);
+            if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                //将所有input置为文本框  主要为了重置密码框
+                input.prop('type','text');
+                input.addClass('placeholder');
+                input.val(input.attr('placeholder'));
+            }else{
+                //密码框填写密码后 密码后恢复 密码框
+                if(input[0].id=='userPassword'){
+                    input.prop('type','password');
+                }
+            }
+        }).blur();
+    };
+
+    function placeholderSupport() {
+        return 'placeholder' in document.createElement('input');
+    }
+
+
+
+4.rgba兼容
+background: rgba(255,255,255,0.1);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#19ffffff,endColorstr=#19ffffff);
+
+第一部是#号后面的19，是rgba透明度0.1的IEfilter值.从0.1到0.9每个数字对应一个IEfilter值。对应关系如下：
+
+                      rgba透明值                   		          IEfilter值
+
+	        0.1                             			19
+
+                        0.2                	          			33
+
+                        0.3   		          			4c
+
+                        0.4    	          			66
+
+                        0.5    	          			7f
+
+                        0.6    	         			99
+
+                        0.7    				b2
+
+                        0.8    				c8
+
+                        0.9    				e5
+
+第二部分是19后面的六位 。这个是六进制的颜色值。要跟rgb函数中的取值相同。比如rgb(255,255,255)对应#ffffff；都是白色。
+
+5. ie6.0横向margin加倍
+产生因素：块属性、float、有横向margin。
+解决方法：display：inline；
+
+6. ie6.0下默认有行高
+解决方法：overflow:hidden;或font-size:0;或line-height：xx px；
+
+7.在各个浏览器下img有空隙
+解决方法:
+(1) 让图片浮动。
+(2) img{ display:block; 或者 vertical-align:top; }
+
+8. 一个父标签与几个子标签嵌套，父标签不浮动，子标签float，子标签不撑开父的高度。
+解决方法：a 在子标签最后清浮动{<div style="height:0;clear:both;">&nbsp;</div>}
+b 父标签添加{overflow：hidden；}
+c 给父标签设置高度
+
+（1）双倍浮向bug ：给浮动元素添加display：inline；
+（2）百分比bug  在ie6 下面会出现 50%（float：left） + 50%（float：left） > 100% 的情况，给最后一个浮动 clear：right
+
+9. Ie6下，不识别最大宽、高度和最小宽高度，意即min-width/height和 Max-width/height在ie6中没效果，
+解决方法：
+(1)：.abc{border:1px blue solid;width:200px;height:200px;}
+html>body .abc{width:auto;height:auto;min-width:200px;min-height:200px;}
+(2)：.abc{width:200px;height:200px;_width:200px;_height:200px;}（因为ie6有一个特征，当定义一个高度时，如果内容超过高度，元素会自动调整高度。）
+
+10. Ie6里面：如li设宽、高，并且li里面的标签浮动，那么li之间会有间距
+解决方法：li不设宽、高或者li内的标签不浮动
+
+11. li之间有间距
+解决方法：li 设置vertical-align:middle;
+
+12. 3像素问题：ie6下，当浮动元素与流动元素并列显示时，他们之间会存在三像素问题。
+解决方法：用hack技术， 例如：所有浏览器通用 height:100px; 
+ie6专用_height:100px;
+ie7专用*+height:100px;
+ie6/ie7共用*height:100px;
+
+13. 当定义行内元素为包含框时，且包含框包含的绝对定位元素以百分比为单位进行定位时，会出现混乱。
+解决方法：在行内元素里加入{zoom：1；}
+
+14. 当多个浮动元素中间夹杂着HTML注释语句时，如果浮动元素宽度为100%，则在下一行多显示一个上一行最后一个字符。
+解决办法：给浮动元素添加display:inline;。
+
+15. opacity 定义元素的不透明度
+filter：alpha（opacity=80）；/*ie支持该属性*/
+opacity：0.8；/*支持css3的浏览器*/
+
+16. 两个块元素，竖向的margin值不增加，会重叠，其间距为最大margin值。
+
+17. 优先级：被!important 注明的css属性具有最高优先级(.abc{color:red !important;})。但在ie6中!important具有一个bug:在同一组css属性中，!important不起作用。
+
+18. 火狐不识别background-position-y 或background-position-x;
+
+
+---------------------------2014.01.10补充-------------------------------
+
+19. ie6 不支持 fixed
+
+复制代码
+/*对于非IE6可以这样写*/
+#top{ 
+position:fixed; 
+bottom:0; 
+right:20px; 
+}
+
+/*但是IE6是不支持fixed定位的，需要另外重写*/
+#top{ 
+position:fixed; 
+_position:absolute; 
+top:0; 
+right:20px; 
+_bottom:auto; 
+_top:expression(eval(document.documentElement.scrollTop));
+}
+
+/*使用hack使IE6实现该效果，但这个东东会闪烁，需要以下代码*/
+*html{ 
+background-image:url(about:blank); 
+background-attachment:fixed; 
+}
+
+/*使固定在顶部*/
+#top{ 
+_position:absolute; 
+_bottom:auto; 
+_top:expression(eval(document.documentElement.scrollTop)); 
+}
+
+/*固定在底部*/
+#top{ 
+_position:absolute; 
+_bottom:auto; 
+_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop)||0)-(parseInt(this.currentStyle.marginBottom)||0))); 
+} 
+/*垂直居中*/
+#top{
+position:fixed;
+top:50%;
+margin-top:-50px;
+_position:absolute;
+_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight/2)); 
+}
+复制代码
+20. 解决 ie6 最大、最小宽高 hack方法
+
+复制代码
+/* 最小宽度 */
+.min_width{
+min-width:300px;
+_width:expression(parseInt(this.clientWidth) < 300 ? "300px" : this.clientWidth);
+}
+
+/* 最大宽度 */
+.max_width{
+max-width:600px;
+_width:expression(parseInt(this.clientWidth) > 600 ? "600px" : this.clientWidth);
+}
+
+/* 最小高度 */
+.min_height{
+min-height:200px;
+_height:expression(parseInt(this.clientHeight) < 200 ? "200px" : this.clientHeight);
+}
+
+/* 最大高度 */
+.max_height{
+max-height:400px;
+_height:expression(parseInt(this.clientHeight) > 400 ? "400px" : this.clientHeight);
+}
+复制代码
+21. z-index不起作用的 bug
+
+1）ie6下 首先讲讲第一种z-index无论设置多高都不起作用情况。这种情况发生的条件有三个：1、父标签position属性为relative；2、问题标签含有浮动(float)属性。
+2）所有浏览器：它只认第一个爸爸
+层级的高低不仅要看自己，还要看自己的老爸这个后台是否够硬。用术语具体描述为：
+父标签position属性为relative或absolute时，子标签的absolute属性是相对于父标签而言的。而在IE6下，层级的表现有时候不是看子标签的z-index多高，而要看它们的父标签的z-index谁高谁低。
+
+22. ie各个版本hack
+
+复制代码
+/*类内部hack：*/
+.header {_width:100px;} /* IE6专用*/
+.header {*+width:100px;} /* IE7专用*/
+.header {*width:100px;} /* IE6、IE7共用*/
+.header {width:100px\0;} /* IE8、IE9共用*/
+.header {width:100px\9;} /* IE6、IE7、IE8、IE9共用*/
+.header {width:330px\9\0;} /* IE9专用*/
+
+/*选择器Hack：*/
+*html .header{} /*IE6*/ 
+*+html .header{} /*IE7*/ 
+复制代码
+
+ 
+
+------------------------------------------------------------------------
+
+
+输入框 一个很基础的控件 结果出现了兼容性问题 
+在chrome ie android上页面正常 结果在Safari和IOS系统里面输入框无法输入 
+点击后有获取焦点的边框高亮效果但是不能输入 查询资料解决 查询解决问题如下
+这个是一个提交的页面但是总是无法输入进去文字 在uc中是可以的 但是在微信中
+或者ios自带浏览器是无法输入的 绞尽脑汁 找了半天 才发现自己多加了一段代码
+(这个代码是模版中自带的 我靠)
+/*-webkit-user-select: none;
+把这行代码注视掉就可以了 至于这行代码作用是什么 解释如下
+或许你常常不希望用户在你的网站上选择文本,无论是否是出于版权的原因.
+通常大家会有js来实现,另一个方案就是,将-webkit-user-select 和-moz-user-select 
+的值设为none.
+请谨慎使用这个属性：因为大部分用户是来查看信息的,他们可以复制并存储下来以备将来之用
+,所以这种方法既无用也无效.如果你禁用了复制粘贴功能,用户还是可以通过查看源文件来获取
+到他们想要的内容.搞不懂这个属性为什么会被webkit和gecko支持.
+
+--------------
+大部分情况下，使用这个属性的目的是为了界面的美化，
+因为手机端很容易因为用户长按屏幕出现文本选择框，
+很丑，影响用户体验，所以在没有 复制黏贴这种需求的
+页面里，一般会使用这个属性禁止用户选择。不过我倒是
+没发现这个属性会导致输入框不能输入
+--------------
+
+想不明白 不过-webkit-user-select: none这个确实会导致
+输入框不能输入 在Safari里面 只要有这个就不行 这个前缀不是
+chrome的内核吗 其他的同属性都可以 但是只要有-webkit前缀的这个
+属性就出问题了 不明白原因 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
