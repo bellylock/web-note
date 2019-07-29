@@ -2,13 +2,13 @@
 <meta http-equiv=Content-Type content="text/html;charset=utf-8">
 <meta http-equiv=X-UA-Compatible content=IE=EmulateIE7>
 
--moz-¶ÔÓ¦ Firefox, 
--webkit-¶ÔÓ¦ Safari and Chrome
+-moz-å¯¹åº” Firefox, 
+-webkit-å¯¹åº” Safari and Chrome
 -o- for Opera
 -ms- for Internet Explorer
 
 <body>
-	<!-- ÈÃIE8/9Ö§³ÖÃ½Ìå²éÑ¯£¬´Ó¶ø¼æÈİÕ¤¸ñ -->
+	<!-- è®©IE8/9æ”¯æŒåª’ä½“æŸ¥è¯¢ï¼Œä»è€Œå…¼å®¹æ …æ ¼ -->
 	<!--[if lt IE 9]>
   		<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
   		<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
@@ -17,8 +17,8 @@
 	<!--[if lt IE 9]>
 	<div class="browser-happy">
     		<div class="content">
-        		<p>×÷ÎªÇ°¶Ë¿ª·¢ÈËÔ±£¬»¹ÓĞÕâÃ´lowµÄä¯ÀÀÆ÷£¬ÔÙ²»¸üĞÂ»áÔâ±ÉÊÓµÄ¡«¡«</p>
-        		<a href="http://browsehappy.com/">Á¢¼´¸üĞÂ</a>
+        		<p>ä½œä¸ºå‰ç«¯å¼€å‘äººå‘˜ï¼Œè¿˜æœ‰è¿™ä¹ˆlowçš„æµè§ˆå™¨ï¼Œå†ä¸æ›´æ–°ä¼šé­é„™è§†çš„ï½ï½</p>
+        		<a href="http://browsehappy.com/">ç«‹å³æ›´æ–°</a>
     		</div>
 	</div>
 	<![endif]-->
@@ -40,8 +40,55 @@
 	-ms-box-shadow: 1px 1px 8px red;
 	behavior:url(pie/PIE.htc);
 
-3.placeholder¼æÈİ
-	//placehlder¼æÈİ ·¨Ò»
+3.placeholderå…¼å®¹
+æœ€æ–°ï¼š
+    function isPlaceholder(){
+        var input = document.createElement('input');
+        return 'placeholder' in input;
+    } 
+    if (!isPlaceholder()) {//ä¸æ”¯æŒplaceholder ç”¨jqueryæ¥å®Œæˆ
+        $(document).ready(function() {
+            if(!isPlaceholder()){
+                $("input").not("input[type='password']").each(//æŠŠinputç»‘å®šäº‹ä»¶ æ’é™¤passwordæ¡†
+                    function(){
+                        if($(this).val()=="" && $(this).attr("placeholder")!=""){
+                            $(this).val($(this).attr("placeholder"));
+                            $(this).focus(function(){
+                                if($(this).val()==$(this).attr("placeholder")) $(this).val("");
+                            });
+                            $(this).blur(function(){
+                                if($(this).val()=="") $(this).val($(this).attr("placeholder"));
+                            });
+                        }
+                    });
+                //å¯¹passwordæ¡†çš„ç‰¹æ®Šå¤„ç†1.åˆ›å»ºä¸€ä¸ªtextæ¡† 2è·å–ç„¦ç‚¹å’Œå¤±å»ç„¦ç‚¹çš„æ—¶å€™åˆ‡æ¢
+                $("input[type='password']").each(
+                    function() {
+                        var pwdField    = $(this);
+                        var pwdVal      = pwdField.attr('placeholder');
+                        pwdField.after('<input  class="login-input" type="text" value='+pwdVal+' autocomplete="off" />');
+                        var pwdPlaceholder = $(this).siblings('.login-input');
+                        pwdPlaceholder.show();
+                        pwdField.hide();
+
+                        pwdPlaceholder.focus(function(){
+                            pwdPlaceholder.hide();
+                            pwdField.show();
+                            pwdField.focus();
+                        });
+
+                        pwdField.blur(function(){
+                            if(pwdField.val() == '') {
+                                pwdPlaceholder.show();
+                                pwdField.hide();
+                            }
+                        });
+                    })
+            }
+        });
+    }
+
+	//placehlderå…¼å®¹ æ³•ä¸€
     	if( !('placeholder' in document.createElement('input')) ){     
               $('input[placeholder],textarea[placeholder]').each(function(){      
                 var that = $(this),      
@@ -67,21 +114,21 @@
               });    
         };
 
-	<!-- ¼æÈİie placeholder  ·¨¶ş -->
+	<!-- å…¼å®¹ie placeholder  æ³•äºŒ -->
 	<!--<script src="http://hovertree.com/texiao/jquery/43/jquery.JPlaceholder.js"></script>
 	<script type="text/javascript" src="js/jianrong_placeholder.js"></script> -->
 
-placeholder¼æÈİ  ·¨Èı
+placeholderå…¼å®¹  æ³•ä¸‰
 
-//   ¼æÈİie9µÄplaceholder
+//   å…¼å®¹ie9çš„placeholder
 function isPlaceholder(){
     var input = document.createElement('input');
     return 'placeholder' in input;
 }
-if (!isPlaceholder()) {//²»Ö§³Öplaceholder ÓÃjqueryÀ´Íê³É
+if (!isPlaceholder()) {//ä¸æ”¯æŒplaceholder ç”¨jqueryæ¥å®Œæˆ
     $(document).ready(function() {
         if(!isPlaceholder()){
-            $("input").not("input[type='password']").each(//°Ñinput°ó¶¨ÊÂ¼ş ÅÅ³ıpassword¿ò
+            $("input").not("input[type='password']").each(//æŠŠinputç»‘å®šäº‹ä»¶ æ’é™¤passwordæ¡†
                     function(){
                         if($(this).val()=="" && $(this).attr("placeholder")!=""){
                             $(this).val($(this).attr("placeholder"));
@@ -93,7 +140,7 @@ if (!isPlaceholder()) {//²»Ö§³Öplaceholder ÓÃjqueryÀ´Íê³É
                             });
                         }
                     });
-            //¶Ôpassword¿òµÄÌØÊâ´¦Àí1.´´½¨Ò»¸ötext¿ò 2»ñÈ¡½¹µãºÍÊ§È¥½¹µãµÄÊ±ºòÇĞ»»
+            //å¯¹passwordæ¡†çš„ç‰¹æ®Šå¤„ç†1.åˆ›å»ºä¸€ä¸ªtextæ¡† 2è·å–ç„¦ç‚¹å’Œå¤±å»ç„¦ç‚¹çš„æ—¶å€™åˆ‡æ¢
             $("input[type='password']").each(
                     function() {
                         var pwdField    = $(this);
@@ -120,11 +167,11 @@ if (!isPlaceholder()) {//²»Ö§³Öplaceholder ÓÃjqueryÀ´Íê³É
     });
 }
 
-//placeholder ¼æÈİ ·¨ËÄ
-if(!placeholderSupport()){   // ÅĞ¶Ïä¯ÀÀÆ÷ÊÇ·ñÖ§³Ö placeholder ²»Ö§³ÖÔòÖ´ĞĞÒ»ÏÂ×Ô¶¨Òå´úÂë
+//placeholder å…¼å®¹ æ³•å››
+if(!placeholderSupport()){   // åˆ¤æ–­æµè§ˆå™¨æ˜¯å¦æ”¯æŒ placeholder ä¸æ”¯æŒåˆ™æ‰§è¡Œä¸€ä¸‹è‡ªå®šä¹‰ä»£ç 
         $('[placeholder]').focus(function() {
             var input = $(this);
-            //ÅĞ¶ÏÈç¹ûÄãÃÜÂë¿ò£¬»ñÈ¡½¹µãÖ®ºóÊôĞÔĞŞ¸ÄÎªÃÜÂë¿ò Èç¹ûÃ»ÓĞÃÜÂë¿ò´Ë´¦ÅĞ¶Ï¿ÉÒÔÉ¾³ı Ò»ÏÂÍ¬Àí
+            //åˆ¤æ–­å¦‚æœä½ å¯†ç æ¡†ï¼Œè·å–ç„¦ç‚¹ä¹‹åå±æ€§ä¿®æ”¹ä¸ºå¯†ç æ¡† å¦‚æœæ²¡æœ‰å¯†ç æ¡†æ­¤å¤„åˆ¤æ–­å¯ä»¥åˆ é™¤ ä¸€ä¸‹åŒç†
             if(input[0].id=='userPassword'){
                 input.prop('type','password');
             }
@@ -135,12 +182,12 @@ if(!placeholderSupport()){   // ÅĞ¶Ïä¯ÀÀÆ÷ÊÇ·ñÖ§³Ö placeholder ²»Ö§³ÖÔòÖ´ĞĞÒ»ÏÂ×
         }).blur(function() {
             var input = $(this);
             if (input.val() == '' || input.val() == input.attr('placeholder')) {
-                //½«ËùÓĞinputÖÃÎªÎÄ±¾¿ò  Ö÷ÒªÎªÁËÖØÖÃÃÜÂë¿ò
+                //å°†æ‰€æœ‰inputç½®ä¸ºæ–‡æœ¬æ¡†  ä¸»è¦ä¸ºäº†é‡ç½®å¯†ç æ¡†
                 input.prop('type','text');
                 input.addClass('placeholder');
                 input.val(input.attr('placeholder'));
             }else{
-                //ÃÜÂë¿òÌîĞ´ÃÜÂëºó ÃÜÂëºó»Ö¸´ ÃÜÂë¿ò
+                //å¯†ç æ¡†å¡«å†™å¯†ç å å¯†ç åæ¢å¤ å¯†ç æ¡†
                 if(input[0].id=='userPassword'){
                     input.prop('type','password');
                 }
@@ -154,13 +201,13 @@ if(!placeholderSupport()){   // ÅĞ¶Ïä¯ÀÀÆ÷ÊÇ·ñÖ§³Ö placeholder ²»Ö§³ÖÔòÖ´ĞĞÒ»ÏÂ×
 
 
 
-4.rgba¼æÈİ
+4.rgbaå…¼å®¹
 background: rgba(255,255,255,0.1);
 filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#19ffffff,endColorstr=#19ffffff);
 
-µÚÒ»²¿ÊÇ#ºÅºóÃæµÄ19£¬ÊÇrgbaÍ¸Ã÷¶È0.1µÄIEfilterÖµ.´Ó0.1µ½0.9Ã¿¸öÊı×Ö¶ÔÓ¦Ò»¸öIEfilterÖµ¡£¶ÔÓ¦¹ØÏµÈçÏÂ£º
+ç¬¬ä¸€éƒ¨æ˜¯#å·åé¢çš„19ï¼Œæ˜¯rgbaé€æ˜åº¦0.1çš„IEfilterå€¼.ä»0.1åˆ°0.9æ¯ä¸ªæ•°å­—å¯¹åº”ä¸€ä¸ªIEfilterå€¼ã€‚å¯¹åº”å…³ç³»å¦‚ä¸‹ï¼š
 
-                      rgbaÍ¸Ã÷Öµ                   		          IEfilterÖµ
+                      rgbaé€æ˜å€¼                   		          IEfilterå€¼
 
 	        0.1                             			19
 
@@ -180,76 +227,76 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#19ffffff,endCol
 
                         0.9    				e5
 
-µÚ¶ş²¿·ÖÊÇ19ºóÃæµÄÁùÎ» ¡£Õâ¸öÊÇÁù½øÖÆµÄÑÕÉ«Öµ¡£Òª¸úrgbº¯ÊıÖĞµÄÈ¡ÖµÏàÍ¬¡£±ÈÈçrgb(255,255,255)¶ÔÓ¦#ffffff£»¶¼ÊÇ°×É«¡£
+ç¬¬äºŒéƒ¨åˆ†æ˜¯19åé¢çš„å…­ä½ ã€‚è¿™ä¸ªæ˜¯å…­è¿›åˆ¶çš„é¢œè‰²å€¼ã€‚è¦è·Ÿrgbå‡½æ•°ä¸­çš„å–å€¼ç›¸åŒã€‚æ¯”å¦‚rgb(255,255,255)å¯¹åº”#ffffffï¼›éƒ½æ˜¯ç™½è‰²ã€‚
 
-5. ie6.0ºáÏòmargin¼Ó±¶
-²úÉúÒòËØ£º¿éÊôĞÔ¡¢float¡¢ÓĞºáÏòmargin¡£
-½â¾ö·½·¨£ºdisplay£ºinline£»
+5. ie6.0æ¨ªå‘marginåŠ å€
+äº§ç”Ÿå› ç´ ï¼šå—å±æ€§ã€floatã€æœ‰æ¨ªå‘marginã€‚
+è§£å†³æ–¹æ³•ï¼šdisplayï¼šinlineï¼›
 
-6. ie6.0ÏÂÄ¬ÈÏÓĞĞĞ¸ß
-½â¾ö·½·¨£ºoverflow:hidden;»òfont-size:0;»òline-height£ºxx px£»
+6. ie6.0ä¸‹é»˜è®¤æœ‰è¡Œé«˜
+è§£å†³æ–¹æ³•ï¼šoverflow:hidden;æˆ–font-size:0;æˆ–line-heightï¼šxx pxï¼›
 
-7.ÔÚ¸÷¸öä¯ÀÀÆ÷ÏÂimgÓĞ¿ÕÏ¶
-½â¾ö·½·¨:
-(1) ÈÃÍ¼Æ¬¸¡¶¯¡£
-(2) img{ display:block; »òÕß vertical-align:top; }
+7.åœ¨å„ä¸ªæµè§ˆå™¨ä¸‹imgæœ‰ç©ºéš™
+è§£å†³æ–¹æ³•:
+(1) è®©å›¾ç‰‡æµ®åŠ¨ã€‚
+(2) img{ display:block; æˆ–è€… vertical-align:top; }
 
-8. Ò»¸ö¸¸±êÇ©Óë¼¸¸ö×Ó±êÇ©Ç¶Ì×£¬¸¸±êÇ©²»¸¡¶¯£¬×Ó±êÇ©float£¬×Ó±êÇ©²»³Å¿ª¸¸µÄ¸ß¶È¡£
-½â¾ö·½·¨£ºa ÔÚ×Ó±êÇ©×îºóÇå¸¡¶¯{<div style="height:0;clear:both;">&nbsp;</div>}
-b ¸¸±êÇ©Ìí¼Ó{overflow£ºhidden£»}
-c ¸ø¸¸±êÇ©ÉèÖÃ¸ß¶È
+8. ä¸€ä¸ªçˆ¶æ ‡ç­¾ä¸å‡ ä¸ªå­æ ‡ç­¾åµŒå¥—ï¼Œçˆ¶æ ‡ç­¾ä¸æµ®åŠ¨ï¼Œå­æ ‡ç­¾floatï¼Œå­æ ‡ç­¾ä¸æ’‘å¼€çˆ¶çš„é«˜åº¦ã€‚
+è§£å†³æ–¹æ³•ï¼ša åœ¨å­æ ‡ç­¾æœ€åæ¸…æµ®åŠ¨{<div style="height:0;clear:both;">&nbsp;</div>}
+b çˆ¶æ ‡ç­¾æ·»åŠ {overflowï¼šhiddenï¼›}
+c ç»™çˆ¶æ ‡ç­¾è®¾ç½®é«˜åº¦
 
-£¨1£©Ë«±¶¸¡Ïòbug £º¸ø¸¡¶¯ÔªËØÌí¼Ódisplay£ºinline£»
-£¨2£©°Ù·Ö±Èbug  ÔÚie6 ÏÂÃæ»á³öÏÖ 50%£¨float£ºleft£© + 50%£¨float£ºleft£© > 100% µÄÇé¿ö£¬¸ø×îºóÒ»¸ö¸¡¶¯ clear£ºright
+ï¼ˆ1ï¼‰åŒå€æµ®å‘bug ï¼šç»™æµ®åŠ¨å…ƒç´ æ·»åŠ displayï¼šinlineï¼›
+ï¼ˆ2ï¼‰ç™¾åˆ†æ¯”bug  åœ¨ie6 ä¸‹é¢ä¼šå‡ºç° 50%ï¼ˆfloatï¼šleftï¼‰ + 50%ï¼ˆfloatï¼šleftï¼‰ > 100% çš„æƒ…å†µï¼Œç»™æœ€åä¸€ä¸ªæµ®åŠ¨ clearï¼šright
 
-9. Ie6ÏÂ£¬²»Ê¶±ğ×î´ó¿í¡¢¸ß¶ÈºÍ×îĞ¡¿í¸ß¶È£¬Òâ¼´min-width/heightºÍ Max-width/heightÔÚie6ÖĞÃ»Ğ§¹û£¬
-½â¾ö·½·¨£º
-(1)£º.abc{border:1px blue solid;width:200px;height:200px;}
+9. Ie6ä¸‹ï¼Œä¸è¯†åˆ«æœ€å¤§å®½ã€é«˜åº¦å’Œæœ€å°å®½é«˜åº¦ï¼Œæ„å³min-width/heightå’Œ Max-width/heightåœ¨ie6ä¸­æ²¡æ•ˆæœï¼Œ
+è§£å†³æ–¹æ³•ï¼š
+(1)ï¼š.abc{border:1px blue solid;width:200px;height:200px;}
 html>body .abc{width:auto;height:auto;min-width:200px;min-height:200px;}
-(2)£º.abc{width:200px;height:200px;_width:200px;_height:200px;}£¨ÒòÎªie6ÓĞÒ»¸öÌØÕ÷£¬µ±¶¨ÒåÒ»¸ö¸ß¶ÈÊ±£¬Èç¹ûÄÚÈİ³¬¹ı¸ß¶È£¬ÔªËØ»á×Ô¶¯µ÷Õû¸ß¶È¡££©
+(2)ï¼š.abc{width:200px;height:200px;_width:200px;_height:200px;}ï¼ˆå› ä¸ºie6æœ‰ä¸€ä¸ªç‰¹å¾ï¼Œå½“å®šä¹‰ä¸€ä¸ªé«˜åº¦æ—¶ï¼Œå¦‚æœå†…å®¹è¶…è¿‡é«˜åº¦ï¼Œå…ƒç´ ä¼šè‡ªåŠ¨è°ƒæ•´é«˜åº¦ã€‚ï¼‰
 
-10. Ie6ÀïÃæ£ºÈçliÉè¿í¡¢¸ß£¬²¢ÇÒliÀïÃæµÄ±êÇ©¸¡¶¯£¬ÄÇÃ´liÖ®¼ä»áÓĞ¼ä¾à
-½â¾ö·½·¨£ºli²»Éè¿í¡¢¸ß»òÕßliÄÚµÄ±êÇ©²»¸¡¶¯
+10. Ie6é‡Œé¢ï¼šå¦‚liè®¾å®½ã€é«˜ï¼Œå¹¶ä¸”lié‡Œé¢çš„æ ‡ç­¾æµ®åŠ¨ï¼Œé‚£ä¹ˆliä¹‹é—´ä¼šæœ‰é—´è·
+è§£å†³æ–¹æ³•ï¼šliä¸è®¾å®½ã€é«˜æˆ–è€…liå†…çš„æ ‡ç­¾ä¸æµ®åŠ¨
 
-11. liÖ®¼äÓĞ¼ä¾à
-½â¾ö·½·¨£ºli ÉèÖÃvertical-align:middle;
+11. liä¹‹é—´æœ‰é—´è·
+è§£å†³æ–¹æ³•ï¼šli è®¾ç½®vertical-align:middle;
 
-12. 3ÏñËØÎÊÌâ£ºie6ÏÂ£¬µ±¸¡¶¯ÔªËØÓëÁ÷¶¯ÔªËØ²¢ÁĞÏÔÊ¾Ê±£¬ËûÃÇÖ®¼ä»á´æÔÚÈıÏñËØÎÊÌâ¡£
-½â¾ö·½·¨£ºÓÃhack¼¼Êõ£¬ ÀıÈç£ºËùÓĞä¯ÀÀÆ÷Í¨ÓÃ height:100px; 
-ie6×¨ÓÃ_height:100px;
-ie7×¨ÓÃ*+height:100px;
-ie6/ie7¹²ÓÃ*height:100px;
+12. 3åƒç´ é—®é¢˜ï¼šie6ä¸‹ï¼Œå½“æµ®åŠ¨å…ƒç´ ä¸æµåŠ¨å…ƒç´ å¹¶åˆ—æ˜¾ç¤ºæ—¶ï¼Œä»–ä»¬ä¹‹é—´ä¼šå­˜åœ¨ä¸‰åƒç´ é—®é¢˜ã€‚
+è§£å†³æ–¹æ³•ï¼šç”¨hackæŠ€æœ¯ï¼Œ ä¾‹å¦‚ï¼šæ‰€æœ‰æµè§ˆå™¨é€šç”¨ height:100px; 
+ie6ä¸“ç”¨_height:100px;
+ie7ä¸“ç”¨*+height:100px;
+ie6/ie7å…±ç”¨*height:100px;
 
-13. µ±¶¨ÒåĞĞÄÚÔªËØÎª°üº¬¿òÊ±£¬ÇÒ°üº¬¿ò°üº¬µÄ¾ø¶Ô¶¨Î»ÔªËØÒÔ°Ù·Ö±ÈÎªµ¥Î»½øĞĞ¶¨Î»Ê±£¬»á³öÏÖ»ìÂÒ¡£
-½â¾ö·½·¨£ºÔÚĞĞÄÚÔªËØÀï¼ÓÈë{zoom£º1£»}
+13. å½“å®šä¹‰è¡Œå†…å…ƒç´ ä¸ºåŒ…å«æ¡†æ—¶ï¼Œä¸”åŒ…å«æ¡†åŒ…å«çš„ç»å¯¹å®šä½å…ƒç´ ä»¥ç™¾åˆ†æ¯”ä¸ºå•ä½è¿›è¡Œå®šä½æ—¶ï¼Œä¼šå‡ºç°æ··ä¹±ã€‚
+è§£å†³æ–¹æ³•ï¼šåœ¨è¡Œå†…å…ƒç´ é‡ŒåŠ å…¥{zoomï¼š1ï¼›}
 
-14. µ±¶à¸ö¸¡¶¯ÔªËØÖĞ¼ä¼ĞÔÓ×ÅHTML×¢ÊÍÓï¾äÊ±£¬Èç¹û¸¡¶¯ÔªËØ¿í¶ÈÎª100%£¬ÔòÔÚÏÂÒ»ĞĞ¶àÏÔÊ¾Ò»¸öÉÏÒ»ĞĞ×îºóÒ»¸ö×Ö·û¡£
-½â¾ö°ì·¨£º¸ø¸¡¶¯ÔªËØÌí¼Ódisplay:inline;¡£
+14. å½“å¤šä¸ªæµ®åŠ¨å…ƒç´ ä¸­é—´å¤¹æ‚ç€HTMLæ³¨é‡Šè¯­å¥æ—¶ï¼Œå¦‚æœæµ®åŠ¨å…ƒç´ å®½åº¦ä¸º100%ï¼Œåˆ™åœ¨ä¸‹ä¸€è¡Œå¤šæ˜¾ç¤ºä¸€ä¸ªä¸Šä¸€è¡Œæœ€åä¸€ä¸ªå­—ç¬¦ã€‚
+è§£å†³åŠæ³•ï¼šç»™æµ®åŠ¨å…ƒç´ æ·»åŠ display:inline;ã€‚
 
-15. opacity ¶¨ÒåÔªËØµÄ²»Í¸Ã÷¶È
-filter£ºalpha£¨opacity=80£©£»/*ieÖ§³Ö¸ÃÊôĞÔ*/
-opacity£º0.8£»/*Ö§³Öcss3µÄä¯ÀÀÆ÷*/
+15. opacity å®šä¹‰å…ƒç´ çš„ä¸é€æ˜åº¦
+filterï¼šalphaï¼ˆopacity=80ï¼‰ï¼›/*ieæ”¯æŒè¯¥å±æ€§*/
+opacityï¼š0.8ï¼›/*æ”¯æŒcss3çš„æµè§ˆå™¨*/
 
-16. Á½¸ö¿éÔªËØ£¬ÊúÏòµÄmarginÖµ²»Ôö¼Ó£¬»áÖØµş£¬Æä¼ä¾àÎª×î´ómarginÖµ¡£
+16. ä¸¤ä¸ªå—å…ƒç´ ï¼Œç«–å‘çš„marginå€¼ä¸å¢åŠ ï¼Œä¼šé‡å ï¼Œå…¶é—´è·ä¸ºæœ€å¤§marginå€¼ã€‚
 
-17. ÓÅÏÈ¼¶£º±»!important ×¢Ã÷µÄcssÊôĞÔ¾ßÓĞ×î¸ßÓÅÏÈ¼¶(.abc{color:red !important;})¡£µ«ÔÚie6ÖĞ!important¾ßÓĞÒ»¸öbug:ÔÚÍ¬Ò»×écssÊôĞÔÖĞ£¬!important²»Æğ×÷ÓÃ¡£
+17. ä¼˜å…ˆçº§ï¼šè¢«!important æ³¨æ˜çš„csså±æ€§å…·æœ‰æœ€é«˜ä¼˜å…ˆçº§(.abc{color:red !important;})ã€‚ä½†åœ¨ie6ä¸­!importantå…·æœ‰ä¸€ä¸ªbug:åœ¨åŒä¸€ç»„csså±æ€§ä¸­ï¼Œ!importantä¸èµ·ä½œç”¨ã€‚
 
-18. »ğºü²»Ê¶±ğbackground-position-y »òbackground-position-x;
+18. ç«ç‹ä¸è¯†åˆ«background-position-y æˆ–background-position-x;
 
 
----------------------------2014.01.10²¹³ä-------------------------------
+---------------------------2014.01.10è¡¥å……-------------------------------
 
-19. ie6 ²»Ö§³Ö fixed
+19. ie6 ä¸æ”¯æŒ fixed
 
-¸´ÖÆ´úÂë
-/*¶ÔÓÚ·ÇIE6¿ÉÒÔÕâÑùĞ´*/
+å¤åˆ¶ä»£ç 
+/*å¯¹äºéIE6å¯ä»¥è¿™æ ·å†™*/
 #top{ 
 position:fixed; 
 bottom:0; 
 right:20px; 
 }
 
-/*µ«ÊÇIE6ÊÇ²»Ö§³Öfixed¶¨Î»µÄ£¬ĞèÒªÁíÍâÖØĞ´*/
+/*ä½†æ˜¯IE6æ˜¯ä¸æ”¯æŒfixedå®šä½çš„ï¼Œéœ€è¦å¦å¤–é‡å†™*/
 #top{ 
 position:fixed; 
 _position:absolute; 
@@ -259,26 +306,26 @@ _bottom:auto;
 _top:expression(eval(document.documentElement.scrollTop));
 }
 
-/*Ê¹ÓÃhackÊ¹IE6ÊµÏÖ¸ÃĞ§¹û£¬µ«Õâ¸ö¶«¶«»áÉÁË¸£¬ĞèÒªÒÔÏÂ´úÂë*/
+/*ä½¿ç”¨hackä½¿IE6å®ç°è¯¥æ•ˆæœï¼Œä½†è¿™ä¸ªä¸œä¸œä¼šé—ªçƒï¼Œéœ€è¦ä»¥ä¸‹ä»£ç */
 *html{ 
 background-image:url(about:blank); 
 background-attachment:fixed; 
 }
 
-/*Ê¹¹Ì¶¨ÔÚ¶¥²¿*/
+/*ä½¿å›ºå®šåœ¨é¡¶éƒ¨*/
 #top{ 
 _position:absolute; 
 _bottom:auto; 
 _top:expression(eval(document.documentElement.scrollTop)); 
 }
 
-/*¹Ì¶¨ÔÚµ×²¿*/
+/*å›ºå®šåœ¨åº•éƒ¨*/
 #top{ 
 _position:absolute; 
 _bottom:auto; 
 _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop)||0)-(parseInt(this.currentStyle.marginBottom)||0))); 
 } 
-/*´¹Ö±¾ÓÖĞ*/
+/*å‚ç›´å±…ä¸­*/
 #top{
 position:fixed;
 top:50%;
@@ -286,89 +333,89 @@ margin-top:-50px;
 _position:absolute;
 _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight/2)); 
 }
-¸´ÖÆ´úÂë
-20. ½â¾ö ie6 ×î´ó¡¢×îĞ¡¿í¸ß hack·½·¨
+å¤åˆ¶ä»£ç 
+20. è§£å†³ ie6 æœ€å¤§ã€æœ€å°å®½é«˜ hackæ–¹æ³•
 
-¸´ÖÆ´úÂë
-/* ×îĞ¡¿í¶È */
+å¤åˆ¶ä»£ç 
+/* æœ€å°å®½åº¦ */
 .min_width{
 min-width:300px;
 _width:expression(parseInt(this.clientWidth) < 300 ? "300px" : this.clientWidth);
 }
 
-/* ×î´ó¿í¶È */
+/* æœ€å¤§å®½åº¦ */
 .max_width{
 max-width:600px;
 _width:expression(parseInt(this.clientWidth) > 600 ? "600px" : this.clientWidth);
 }
 
-/* ×îĞ¡¸ß¶È */
+/* æœ€å°é«˜åº¦ */
 .min_height{
 min-height:200px;
 _height:expression(parseInt(this.clientHeight) < 200 ? "200px" : this.clientHeight);
 }
 
-/* ×î´ó¸ß¶È */
+/* æœ€å¤§é«˜åº¦ */
 .max_height{
 max-height:400px;
 _height:expression(parseInt(this.clientHeight) > 400 ? "400px" : this.clientHeight);
 }
-¸´ÖÆ´úÂë
-21. z-index²»Æğ×÷ÓÃµÄ bug
+å¤åˆ¶ä»£ç 
+21. z-indexä¸èµ·ä½œç”¨çš„ bug
 
-1£©ie6ÏÂ Ê×ÏÈ½²½²µÚÒ»ÖÖz-indexÎŞÂÛÉèÖÃ¶à¸ß¶¼²»Æğ×÷ÓÃÇé¿ö¡£ÕâÖÖÇé¿ö·¢ÉúµÄÌõ¼şÓĞÈı¸ö£º1¡¢¸¸±êÇ©positionÊôĞÔÎªrelative£»2¡¢ÎÊÌâ±êÇ©º¬ÓĞ¸¡¶¯(float)ÊôĞÔ¡£
-2£©ËùÓĞä¯ÀÀÆ÷£ºËüÖ»ÈÏµÚÒ»¸ö°Ö°Ö
-²ã¼¶µÄ¸ßµÍ²»½öÒª¿´×Ô¼º£¬»¹Òª¿´×Ô¼ºµÄÀÏ°ÖÕâ¸öºóÌ¨ÊÇ·ñ¹»Ó²¡£ÓÃÊõÓï¾ßÌåÃèÊöÎª£º
-¸¸±êÇ©positionÊôĞÔÎªrelative»òabsoluteÊ±£¬×Ó±êÇ©µÄabsoluteÊôĞÔÊÇÏà¶ÔÓÚ¸¸±êÇ©¶øÑÔµÄ¡£¶øÔÚIE6ÏÂ£¬²ã¼¶µÄ±íÏÖÓĞÊ±ºò²»ÊÇ¿´×Ó±êÇ©µÄz-index¶à¸ß£¬¶øÒª¿´ËüÃÇµÄ¸¸±êÇ©µÄz-indexË­¸ßË­µÍ¡£
+1ï¼‰ie6ä¸‹ é¦–å…ˆè®²è®²ç¬¬ä¸€ç§z-indexæ— è®ºè®¾ç½®å¤šé«˜éƒ½ä¸èµ·ä½œç”¨æƒ…å†µã€‚è¿™ç§æƒ…å†µå‘ç”Ÿçš„æ¡ä»¶æœ‰ä¸‰ä¸ªï¼š1ã€çˆ¶æ ‡ç­¾positionå±æ€§ä¸ºrelativeï¼›2ã€é—®é¢˜æ ‡ç­¾å«æœ‰æµ®åŠ¨(float)å±æ€§ã€‚
+2ï¼‰æ‰€æœ‰æµè§ˆå™¨ï¼šå®ƒåªè®¤ç¬¬ä¸€ä¸ªçˆ¸çˆ¸
+å±‚çº§çš„é«˜ä½ä¸ä»…è¦çœ‹è‡ªå·±ï¼Œè¿˜è¦çœ‹è‡ªå·±çš„è€çˆ¸è¿™ä¸ªåå°æ˜¯å¦å¤Ÿç¡¬ã€‚ç”¨æœ¯è¯­å…·ä½“æè¿°ä¸ºï¼š
+çˆ¶æ ‡ç­¾positionå±æ€§ä¸ºrelativeæˆ–absoluteæ—¶ï¼Œå­æ ‡ç­¾çš„absoluteå±æ€§æ˜¯ç›¸å¯¹äºçˆ¶æ ‡ç­¾è€Œè¨€çš„ã€‚è€Œåœ¨IE6ä¸‹ï¼Œå±‚çº§çš„è¡¨ç°æœ‰æ—¶å€™ä¸æ˜¯çœ‹å­æ ‡ç­¾çš„z-indexå¤šé«˜ï¼Œè€Œè¦çœ‹å®ƒä»¬çš„çˆ¶æ ‡ç­¾çš„z-indexè°é«˜è°ä½ã€‚
 
-22. ie¸÷¸ö°æ±¾hack
+22. ieå„ä¸ªç‰ˆæœ¬hack
 
-¸´ÖÆ´úÂë
-/*ÀàÄÚ²¿hack£º*/
-.header {_width:100px;} /* IE6×¨ÓÃ*/
-.header {*+width:100px;} /* IE7×¨ÓÃ*/
-.header {*width:100px;} /* IE6¡¢IE7¹²ÓÃ*/
-.header {width:100px\0;} /* IE8¡¢IE9¹²ÓÃ*/
-.header {width:100px\9;} /* IE6¡¢IE7¡¢IE8¡¢IE9¹²ÓÃ*/
-.header {width:330px\9\0;} /* IE9×¨ÓÃ*/
+å¤åˆ¶ä»£ç 
+/*ç±»å†…éƒ¨hackï¼š*/
+.header {_width:100px;} /* IE6ä¸“ç”¨*/
+.header {*+width:100px;} /* IE7ä¸“ç”¨*/
+.header {*width:100px;} /* IE6ã€IE7å…±ç”¨*/
+.header {width:100px\0;} /* IE8ã€IE9å…±ç”¨*/
+.header {width:100px\9;} /* IE6ã€IE7ã€IE8ã€IE9å…±ç”¨*/
+.header {width:330px\9\0;} /* IE9ä¸“ç”¨*/
 
-/*Ñ¡ÔñÆ÷Hack£º*/
+/*é€‰æ‹©å™¨Hackï¼š*/
 *html .header{} /*IE6*/ 
 *+html .header{} /*IE7*/ 
-¸´ÖÆ´úÂë
+å¤åˆ¶ä»£ç 
 
  
 
 ------------------------------------------------------------------------
 
 
-ÊäÈë¿ò Ò»¸öºÜ»ù´¡µÄ¿Ø¼ş ½á¹û³öÏÖÁË¼æÈİĞÔÎÊÌâ 
-ÔÚchrome ie androidÉÏÒ³ÃæÕı³£ ½á¹ûÔÚSafariºÍIOSÏµÍ³ÀïÃæÊäÈë¿òÎŞ·¨ÊäÈë 
-µã»÷ºóÓĞ»ñÈ¡½¹µãµÄ±ß¿ò¸ßÁÁĞ§¹ûµ«ÊÇ²»ÄÜÊäÈë ²éÑ¯×ÊÁÏ½â¾ö ²éÑ¯½â¾öÎÊÌâÈçÏÂ
-Õâ¸öÊÇÒ»¸öÌá½»µÄÒ³Ãæµ«ÊÇ×ÜÊÇÎŞ·¨ÊäÈë½øÈ¥ÎÄ×Ö ÔÚucÖĞÊÇ¿ÉÒÔµÄ µ«ÊÇÔÚÎ¢ĞÅÖĞ
-»òÕßios×Ô´øä¯ÀÀÆ÷ÊÇÎŞ·¨ÊäÈëµÄ ½Ê¾¡ÄÔÖ­ ÕÒÁË°ëÌì ²Å·¢ÏÖ×Ô¼º¶à¼ÓÁËÒ»¶Î´úÂë
-(Õâ¸ö´úÂëÊÇÄ£°æÖĞ×Ô´øµÄ ÎÒ¿¿)
+è¾“å…¥æ¡† ä¸€ä¸ªå¾ˆåŸºç¡€çš„æ§ä»¶ ç»“æœå‡ºç°äº†å…¼å®¹æ€§é—®é¢˜ 
+åœ¨chrome ie androidä¸Šé¡µé¢æ­£å¸¸ ç»“æœåœ¨Safariå’ŒIOSç³»ç»Ÿé‡Œé¢è¾“å…¥æ¡†æ— æ³•è¾“å…¥ 
+ç‚¹å‡»åæœ‰è·å–ç„¦ç‚¹çš„è¾¹æ¡†é«˜äº®æ•ˆæœä½†æ˜¯ä¸èƒ½è¾“å…¥ æŸ¥è¯¢èµ„æ–™è§£å†³ æŸ¥è¯¢è§£å†³é—®é¢˜å¦‚ä¸‹
+è¿™ä¸ªæ˜¯ä¸€ä¸ªæäº¤çš„é¡µé¢ä½†æ˜¯æ€»æ˜¯æ— æ³•è¾“å…¥è¿›å»æ–‡å­— åœ¨ucä¸­æ˜¯å¯ä»¥çš„ ä½†æ˜¯åœ¨å¾®ä¿¡ä¸­
+æˆ–è€…iosè‡ªå¸¦æµè§ˆå™¨æ˜¯æ— æ³•è¾“å…¥çš„ ç»å°½è„‘æ± æ‰¾äº†åŠå¤© æ‰å‘ç°è‡ªå·±å¤šåŠ äº†ä¸€æ®µä»£ç 
+(è¿™ä¸ªä»£ç æ˜¯æ¨¡ç‰ˆä¸­è‡ªå¸¦çš„ æˆ‘é )
 /*-webkit-user-select: none;
-°ÑÕâĞĞ´úÂë×¢ÊÓµô¾Í¿ÉÒÔÁË ÖÁÓÚÕâĞĞ´úÂë×÷ÓÃÊÇÊ²Ã´ ½âÊÍÈçÏÂ
-»òĞíÄã³£³£²»Ï£ÍûÓÃ»§ÔÚÄãµÄÍøÕ¾ÉÏÑ¡ÔñÎÄ±¾,ÎŞÂÛÊÇ·ñÊÇ³öÓÚ°æÈ¨µÄÔ­Òò.
-Í¨³£´ó¼Ò»áÓĞjsÀ´ÊµÏÖ,ÁíÒ»¸ö·½°¸¾ÍÊÇ,½«-webkit-user-select ºÍ-moz-user-select 
-µÄÖµÉèÎªnone.
-Çë½÷É÷Ê¹ÓÃÕâ¸öÊôĞÔ£ºÒòÎª´ó²¿·ÖÓÃ»§ÊÇÀ´²é¿´ĞÅÏ¢µÄ,ËûÃÇ¿ÉÒÔ¸´ÖÆ²¢´æ´¢ÏÂÀ´ÒÔ±¸½«À´Ö®ÓÃ
-,ËùÒÔÕâÖÖ·½·¨¼ÈÎŞÓÃÒ²ÎŞĞ§.Èç¹ûÄã½ûÓÃÁË¸´ÖÆÕ³Ìù¹¦ÄÜ,ÓÃ»§»¹ÊÇ¿ÉÒÔÍ¨¹ı²é¿´Ô´ÎÄ¼şÀ´»ñÈ¡
-µ½ËûÃÇÏëÒªµÄÄÚÈİ.¸ã²»¶®Õâ¸öÊôĞÔÎªÊ²Ã´»á±»webkitºÍgeckoÖ§³Ö.
+æŠŠè¿™è¡Œä»£ç æ³¨è§†æ‰å°±å¯ä»¥äº† è‡³äºè¿™è¡Œä»£ç ä½œç”¨æ˜¯ä»€ä¹ˆ è§£é‡Šå¦‚ä¸‹
+æˆ–è®¸ä½ å¸¸å¸¸ä¸å¸Œæœ›ç”¨æˆ·åœ¨ä½ çš„ç½‘ç«™ä¸Šé€‰æ‹©æ–‡æœ¬,æ— è®ºæ˜¯å¦æ˜¯å‡ºäºç‰ˆæƒçš„åŸå› .
+é€šå¸¸å¤§å®¶ä¼šæœ‰jsæ¥å®ç°,å¦ä¸€ä¸ªæ–¹æ¡ˆå°±æ˜¯,å°†-webkit-user-select å’Œ-moz-user-select 
+çš„å€¼è®¾ä¸ºnone.
+è¯·è°¨æ…ä½¿ç”¨è¿™ä¸ªå±æ€§ï¼šå› ä¸ºå¤§éƒ¨åˆ†ç”¨æˆ·æ˜¯æ¥æŸ¥çœ‹ä¿¡æ¯çš„,ä»–ä»¬å¯ä»¥å¤åˆ¶å¹¶å­˜å‚¨ä¸‹æ¥ä»¥å¤‡å°†æ¥ä¹‹ç”¨
+,æ‰€ä»¥è¿™ç§æ–¹æ³•æ—¢æ— ç”¨ä¹Ÿæ— æ•ˆ.å¦‚æœä½ ç¦ç”¨äº†å¤åˆ¶ç²˜è´´åŠŸèƒ½,ç”¨æˆ·è¿˜æ˜¯å¯ä»¥é€šè¿‡æŸ¥çœ‹æºæ–‡ä»¶æ¥è·å–
+åˆ°ä»–ä»¬æƒ³è¦çš„å†…å®¹.æä¸æ‡‚è¿™ä¸ªå±æ€§ä¸ºä»€ä¹ˆä¼šè¢«webkitå’Œgeckoæ”¯æŒ.
 
 --------------
-´ó²¿·ÖÇé¿öÏÂ£¬Ê¹ÓÃÕâ¸öÊôĞÔµÄÄ¿µÄÊÇÎªÁË½çÃæµÄÃÀ»¯£¬
-ÒòÎªÊÖ»ú¶ËºÜÈİÒ×ÒòÎªÓÃ»§³¤°´ÆÁÄ»³öÏÖÎÄ±¾Ñ¡Ôñ¿ò£¬
-ºÜ³ó£¬Ó°ÏìÓÃ»§ÌåÑé£¬ËùÒÔÔÚÃ»ÓĞ ¸´ÖÆğ¤ÌùÕâÖÖĞèÇóµÄ
-Ò³ÃæÀï£¬Ò»°ã»áÊ¹ÓÃÕâ¸öÊôĞÔ½ûÖ¹ÓÃ»§Ñ¡Ôñ¡£²»¹ıÎÒµ¹ÊÇ
-Ã»·¢ÏÖÕâ¸öÊôĞÔ»áµ¼ÖÂÊäÈë¿ò²»ÄÜÊäÈë
+å¤§éƒ¨åˆ†æƒ…å†µä¸‹ï¼Œä½¿ç”¨è¿™ä¸ªå±æ€§çš„ç›®çš„æ˜¯ä¸ºäº†ç•Œé¢çš„ç¾åŒ–ï¼Œ
+å› ä¸ºæ‰‹æœºç«¯å¾ˆå®¹æ˜“å› ä¸ºç”¨æˆ·é•¿æŒ‰å±å¹•å‡ºç°æ–‡æœ¬é€‰æ‹©æ¡†ï¼Œ
+å¾ˆä¸‘ï¼Œå½±å“ç”¨æˆ·ä½“éªŒï¼Œæ‰€ä»¥åœ¨æ²¡æœ‰ å¤åˆ¶é»è´´è¿™ç§éœ€æ±‚çš„
+é¡µé¢é‡Œï¼Œä¸€èˆ¬ä¼šä½¿ç”¨è¿™ä¸ªå±æ€§ç¦æ­¢ç”¨æˆ·é€‰æ‹©ã€‚ä¸è¿‡æˆ‘å€’æ˜¯
+æ²¡å‘ç°è¿™ä¸ªå±æ€§ä¼šå¯¼è‡´è¾“å…¥æ¡†ä¸èƒ½è¾“å…¥
 --------------
 
-Ïë²»Ã÷°× ²»¹ı-webkit-user-select: noneÕâ¸öÈ·Êµ»áµ¼ÖÂ
-ÊäÈë¿ò²»ÄÜÊäÈë ÔÚSafariÀïÃæ Ö»ÒªÓĞÕâ¸ö¾Í²»ĞĞ Õâ¸öÇ°×º²»ÊÇ
-chromeµÄÄÚºËÂğ ÆäËûµÄÍ¬ÊôĞÔ¶¼¿ÉÒÔ µ«ÊÇÖ»ÒªÓĞ-webkitÇ°×ºµÄÕâ¸ö
-ÊôĞÔ¾Í³öÎÊÌâÁË ²»Ã÷°×Ô­Òò 
+æƒ³ä¸æ˜ç™½ ä¸è¿‡-webkit-user-select: noneè¿™ä¸ªç¡®å®ä¼šå¯¼è‡´
+è¾“å…¥æ¡†ä¸èƒ½è¾“å…¥ åœ¨Safarié‡Œé¢ åªè¦æœ‰è¿™ä¸ªå°±ä¸è¡Œ è¿™ä¸ªå‰ç¼€ä¸æ˜¯
+chromeçš„å†…æ ¸å— å…¶ä»–çš„åŒå±æ€§éƒ½å¯ä»¥ ä½†æ˜¯åªè¦æœ‰-webkitå‰ç¼€çš„è¿™ä¸ª
+å±æ€§å°±å‡ºé—®é¢˜äº† ä¸æ˜ç™½åŸå›  
 
 
 
