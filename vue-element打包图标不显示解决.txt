@@ -1,0 +1,31 @@
+1.config中index.js文件 
+
+       把assetsPublicPath: '/',
+       
+改为：
+       assetsPublicPath: './',
+
+2.build中utils中：
+
+     在
+if (options.extract) {
+      return ExtractTextPlugin.extract({
+        use: loaders,
+        fallback: 'vue-style-loader',
+        原本没有的
+      })
+    } else {
+      return ['vue-style-loader'].concat(loaders)
+    }
+
+添加  publicPath
+
+if (options.extract) {
+      return ExtractTextPlugin.extract({
+        use: loaders,
+        fallback: 'vue-style-loader',
+        publicPath:'../../'           //添加的内容
+      })
+    } else {
+      return ['vue-style-loader'].concat(loaders)
+    }
