@@ -1,30 +1,30 @@
-1.configÖĞindex.jsÎÄ¼ş 
+1.configä¸­index.jsæ–‡ä»¶ 
 
-       °ÑassetsPublicPath: '/',
+       æŠŠ build ä¸­çš„ assetsPublicPath: '/',  ï¼ˆæ˜¯buildä¸æ˜¯devï¼Œçœ‹æ¸…æ¥šäº†ï¼ï¼ï¼ï¼‰
        
-¸ÄÎª£º
+æ”¹ä¸ºï¼š
        assetsPublicPath: './',
 
-2.buildÖĞutilsÖĞ£º
+2.buildä¸­utilsä¸­ï¼š
 
-     ÔÚ
+     åœ¨
 if (options.extract) {
       return ExtractTextPlugin.extract({
         use: loaders,
         fallback: 'vue-style-loader',
-        Ô­±¾Ã»ÓĞµÄ
+        åŸæœ¬æ²¡æœ‰çš„
       })
     } else {
       return ['vue-style-loader'].concat(loaders)
     }
 
-Ìí¼Ó  publicPath
+æ·»åŠ   publicPath
 
 if (options.extract) {
       return ExtractTextPlugin.extract({
         use: loaders,
         fallback: 'vue-style-loader',
-        publicPath:'../../'           //Ìí¼ÓµÄÄÚÈİ
+        publicPath:'../../'           //æ·»åŠ çš„å†…å®¹
       })
     } else {
       return ['vue-style-loader'].concat(loaders)
