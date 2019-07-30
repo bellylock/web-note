@@ -1,6 +1,6 @@
-gitÉÏ´«ÏÂÔØ
+gitä¸Šä¼ ä¸‹è½½
 
-£¨1£©gitÉÏ´«ÎÄ¼ş
+ï¼ˆ1ï¼‰gitä¸Šä¼ æ–‡ä»¶
 
 git init
 
@@ -10,32 +10,32 @@ git commit -m 'first commit'
 
 git remote add origin https://github.com/cade8800/ionic-demo.git
 
-git pull --rebase origin master£¨Èç¹ûÉÏ´«µÄGit²Ö¿â²»Îª¿ÕµÄ»°ĞèÒªÖ´ĞĞÕâÒ»²½£©
+git pull --rebase origin masterï¼ˆå¦‚æœä¸Šä¼ çš„Gitä»“åº“ä¸ä¸ºç©ºçš„è¯éœ€è¦æ‰§è¡Œè¿™ä¸€æ­¥ï¼‰
 
-git push -u origin master
+git push -u origin masterï¼ˆå¦‚æœåœ¨åŸæœ‰æ–‡ä»¶çš„åŸºç¡€ä¸Šæ·»åŠ æ–°æ–‡ä»¶ï¼Œæ‰§è¡Œå®Œæ­¤æ­¥éª¤åæŠ¥é”™ï¼Œæ‰§è¡Œgit pull --rebase origin masterï¼Œå†æ‰§è¡Œgit push origin masterï¼‰
 
 git status
 
 
-£¨2£©gitÏÂÔØµ½±¾µØ
+ï¼ˆ2ï¼‰gitä¸‹è½½åˆ°æœ¬åœ°
 
-cdµ½ÒªÏÂÔØµ½µÄÎÄ¼ş¼ĞÏÂ
+cdåˆ°è¦ä¸‹è½½åˆ°çš„æ–‡ä»¶å¤¹ä¸‹
 git clone https://github.com/cade8800/ionic-demo.git
 
-£¨3£©gitÉ¾³ıgit²Ö¿âÄÚÈİ
-ÏÈcloneÒªÉ¾³ıµÄÎÄ¼şµ½±¾µØ
+ï¼ˆ3ï¼‰gitåˆ é™¤gitä»“åº“å†…å®¹
+å…ˆcloneè¦åˆ é™¤çš„æ–‡ä»¶åˆ°æœ¬åœ°
 git clone 
 git rm --cached -r address.html
 git commit -m "address.html"
 git push https://github.com/bellylock/nothing.git
 
 
-³£ÓÃÖ¸Áî£º
-1.git status  ( ²é¿´×´Ì¬ )
-2.git log    ( ²é¿´ÀúÊ·¼ÇÂ¼ )
-3.git reflog     ( »ñÈ¡µ½ĞŞ¸Ä¹ıµÄ°æ±¾ºÅ )
-4.git reset --hard °æ±¾ºÅ  ( »Øµ½¶ÔÓ¦°æ±¾ºÅÏÂµÄÎÄ±¾ÄÚÈİ )  
-ÀıÈç£ºgit reset --hard 435ccc9
-5.git reset --hard HEAD^   ( »ØÍËµ½ÉÏÒ»¸ö°æ±¾ )
-6.git reset --hard HEAD^^ ( »ØÍËµ½ÉÏÉÏÒ»¸ö°æ±¾ )
-7.git reset --hrad HEAD~100  ( »ØÍËµ½Ç°100¸ö°æ±¾ )
+å¸¸ç”¨æŒ‡ä»¤ï¼š
+1.git status  ( æŸ¥çœ‹çŠ¶æ€ )
+2.git log    ( æŸ¥çœ‹å†å²è®°å½• )
+3.git reflog     ( è·å–åˆ°ä¿®æ”¹è¿‡çš„ç‰ˆæœ¬å· )
+4.git reset --hard ç‰ˆæœ¬å·  ( å›åˆ°å¯¹åº”ç‰ˆæœ¬å·ä¸‹çš„æ–‡æœ¬å†…å®¹ )  
+ä¾‹å¦‚ï¼šgit reset --hard 435ccc9
+5.git reset --hard HEAD^   ( å›é€€åˆ°ä¸Šä¸€ä¸ªç‰ˆæœ¬ )
+6.git reset --hard HEAD^^ ( å›é€€åˆ°ä¸Šä¸Šä¸€ä¸ªç‰ˆæœ¬ )
+7.git reset --hrad HEAD~100  ( å›é€€åˆ°å‰100ä¸ªç‰ˆæœ¬ )
